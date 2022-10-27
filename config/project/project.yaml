@@ -1,0 +1,27 @@
+dateModified: 1666863956
+email:
+  fromEmail: mail@oscaralexander.com
+  fromName: Boilerplate
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    5de7f742-2238-4ee6-adfa-25d555808a2a: Boilerplate # Boilerplate
+    5fb1c444-a839-4995-ac57-7901b532637d: Common # Common
+    96afcc4b-dee9-49e2-8900-b294a391be40: Boilerplate # Boilerplate
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: Boilerplate
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
