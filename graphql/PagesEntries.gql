@@ -1,0 +1,8 @@
+query PagesEntries {
+  pagesEntries {
+    ... on pages_default_Entry {
+      url
+      uri
+    }
+  }
+}

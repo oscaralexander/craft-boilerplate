@@ -1,0 +1,23 @@
+query PagesEntry {
+  pagesEntries(slug: "home") {
+    ... on pages_default_Entry {
+      id
+      slug
+      pageBody {
+        ...Statistics
+      }
+    }
+  }
+}
+
+fragment Statistics on pageBody_statistics_BlockType {
+  id
+  eyebrow
+  heading
+  text
+  statistics {
+    label
+    value
+  }
+  source
+}

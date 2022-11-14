@@ -1,0 +1,12 @@
+query NavEntries {
+  navEntries {
+    ... on nav_default_Entry {
+      id
+      navUrl
+      title
+      parent(id: "") {
+        id
+      }
+    }
+  }
+}
