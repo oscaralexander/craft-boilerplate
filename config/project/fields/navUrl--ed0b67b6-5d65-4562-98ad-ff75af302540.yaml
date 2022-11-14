@@ -1,0 +1,19 @@
+columnSuffix: tzbcoeei
+contentColumnType: text
+fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigation
+handle: navUrl
+instructions: null
+name: URL
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: /about
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

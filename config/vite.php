@@ -3,12 +3,11 @@
 use craft\helpers\App;
 
 return [
-    'useDevServer' => App::env('ENVIRONMENT') === 'dev' || App::env('CRAFT_ENVIRONMENT') === 'dev',
-    'manifestPath' => '@webroot/dist/manifest.json',
-    'devServerPublic' => 'http://localhost:3000/',
-    'serverPublic' => App::env('PRIMARY_SITE_URL') . '/dist/',
-    'includeReactRefreshShim' => false,
-    'includeModulePreloadShim' => true,
-    'criticalPath' => '@webroot/dist/criticalcss',
-    'criticalSuffix' =>'_critical.min.css',
+	'checkDevServer' => true,
+	'devServerInternal' => 'http://localhost:3000',
+	'devServerPublic' => Craft::getAlias('@web') . ':3000',
+	'errorEntry' => 'src/js/app.js',
+	'manifestPath' => Craft::getAlias('@webroot') . '/dist/manifest.json',
+	'serverPublic' => Craft::getAlias('@web')  . '/dist/',
+	'useDevServer' => (bool) App::env('VITE_USE_DEV_SERVER'),
 ];

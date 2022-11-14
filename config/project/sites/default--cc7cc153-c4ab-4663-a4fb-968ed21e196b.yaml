@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: Boilerplate
+primary: true
+siteGroup: c83fc930-f070-4cca-a8e3-24dec242c1a1 # Boilerplate
+sortOrder: 1

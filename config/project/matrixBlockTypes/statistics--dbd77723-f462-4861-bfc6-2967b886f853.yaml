@@ -1,0 +1,213 @@
+field: 3fff2238-67a0-4baf-afcf-9136097514c6 # Body
+fieldLayouts:
+  507b06b3-9e86-4141-9df6-a2e5589ea1d1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0dc4b461-7030-4bb1-a872-cc470ccba30f # Eyebrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a81c501b-7db4-4505-b19a-8f8dc6de5771
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 880510ac-f9a0-4d15-b36e-3a24c905c5e1 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3857a22-9912-48fc-8785-6cb6fbab9e0a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bb547ad8-d19b-4dc8-b723-39dfb5bd836c # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8f6747ca-64d8-40ad-8ee3-d51f216ee654
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 080b19fc-094e-4209-808f-bb3ab8fa909b # Statistics
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e40a16f-6302-4559-a60d-5b85eaf3f1c7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 00f2779c-6fe4-4a8c-824c-1771170a5553 # Source
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6399237-bcb7-4a28-bed3-1e20158c90ea
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fc4f84e1-877c-4bda-ae7f-441917bc55a1
+        userCondition: null
+fields:
+  0dc4b461-7030-4bb1-a872-cc470ccba30f: # Eyebrow
+    columnSuffix: zouqmlcz
+    contentColumnType: text
+    fieldGroup: null
+    handle: eyebrow
+    instructions: null
+    name: Eyebrow
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  00f2779c-6fe4-4a8c-824c-1771170a5553: # Source
+    columnSuffix: hoouluxm
+    contentColumnType: text
+    fieldGroup: null
+    handle: source
+    instructions: null
+    name: Source
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  080b19fc-094e-4209-808f-bb3ab8fa909b: # Statistics
+    columnSuffix: gqmjyegb
+    contentColumnType: text
+    fieldGroup: null
+    handle: statistics
+    instructions: null
+    name: Statistics
+    searchable: false
+    settings:
+      addRowLabel: 'Add statistic'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Value
+                -
+                  - handle
+                  - value
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Label
+                -
+                  - handle
+                  - label
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: null
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  880510ac-f9a0-4d15-b36e-3a24c905c5e1: # Heading
+    columnSuffix: oyktjadg
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bb547ad8-d19b-4dc8-b723-39dfb5bd836c: # Text
+    columnSuffix: kyawzinl
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: statistics
+name: Statistics
+sortOrder: 1

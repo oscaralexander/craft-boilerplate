@@ -1,8 +1,0 @@
-baseUrl: $PRIMARY_SITE_URL
-handle: default
-hasUrls: true
-language: nl-NL
-name: Boilerplate
-primary: true
-siteGroup: 5de7f742-2238-4ee6-adfa-25d555808a2a # Boilerplate
-sortOrder: 1

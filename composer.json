@@ -1,7 +1,8 @@
 {
   "require": {
     "craftcms/cms": "^4.2.7",
-    "nystudio107/craft-vite": "4.0.3",
+    "craftcms/redactor": "3.0.2",
+    "nystudio107/craft-vite": "^4.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
