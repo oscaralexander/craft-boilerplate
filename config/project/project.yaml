@@ -1,4 +1,4 @@
-dateModified: 1668427759
+dateModified: 1668430747
 email:
   fromEmail: alex.griffioen@gmail.com
   fromName: Boilerplate
@@ -32,7 +32,7 @@ meta:
     7aee0edb-669b-401d-a0ba-26b5b39140e7: Navigation # Navigation
     78dbc335-db89-40cb-8728-baf565f33afb: Pages # Pages
     080b19fc-094e-4209-808f-bb3ab8fa909b: Statistics # Statistics
-    254d3d32-c63f-4944-bb6d-9a5bdac19b4b: Images
+    254d3d32-c63f-4944-bb6d-9a5bdac19b4b: Images # Images
     7358c07a-9a2e-4db0-bd56-c23f083a5a93: Default # Default
     41563a1a-12de-4c00-87c0-062f43ed7439: 'Public Schema' # Public Schema
     62187b9e-53db-4f2a-a019-4a83bdcb6d79: Default # Default
