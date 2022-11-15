@@ -1,4 +1,5 @@
 init:
+	@cp .ddev/config.example.yaml .ddev/config.yaml
 	$(eval PROJECT_NAME = $(shell bash -c 'read -p "Project name: " project_name; echo $$project_name'))
 	ddev config --project-name=$(PROJECT_NAME) --project-type=craftcms
 	ddev start
