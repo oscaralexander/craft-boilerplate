@@ -1,6 +1,5 @@
-PROJECT_NAME ?= $(shell bash -c 'read -p "Project name: " project_name; echo $$project_name')
-
 init:
+	$(eval PROJECT_NAME = $(shell bash -c 'read -p "Project name: " project_name; echo $$project_name'))
 	ddev config --project-name=$(PROJECT_NAME) --project-type=craftcms
 	ddev start
 	ddev composer install
