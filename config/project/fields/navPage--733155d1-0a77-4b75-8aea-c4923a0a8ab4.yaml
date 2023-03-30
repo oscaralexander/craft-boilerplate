@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigatie
+handle: navPage
+instructions: 'Selecteer de pagina waar dit item naar moet verwijzen. Is er geen interne pagina, vul dan bij het volgende veld de URL in waar dit item naar moet verwijzen.'
+name: Pagina
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 0
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Selecteer pagina'
+  showSiteMenu: true
+  sources:
+    - 'section:78dbc335-db89-40cb-8728-baf565f33afb' # Pagina’s
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

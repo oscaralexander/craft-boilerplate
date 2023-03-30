@@ -1,0 +1,14 @@
+columnSuffix: ktxsbzru
+contentColumnType: boolean
+fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigatie
+handle: navIsTargetBlank
+instructions: null
+name: 'Openen in nieuwe tab?'
+searchable: false
+settings:
+  default: false
+  offLabel: Nee
+  onLabel: Ja
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

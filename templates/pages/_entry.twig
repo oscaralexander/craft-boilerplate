@@ -1,0 +1,9 @@
+{% extends "_layout.twig" %}
+
+{% if entry is not defined %}
+    {% set entry = craft.entries.section("pages").slug("home").one() %}
+{% endif %}
+
+{% block content %}
+    <h1>{{ entry.title }}</h1>
+{% endblock %}

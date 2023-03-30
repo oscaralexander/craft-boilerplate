@@ -1,4 +1,4 @@
-dateModified: 1679430876
+dateModified: 1680170109
 email:
   fromEmail: alex.griffioen@gmail.com
   fromName: Boilerplate
@@ -29,14 +29,15 @@ meta:
     00f2779c-6fe4-4a8c-824c-1771170a5553: Source # Source
     2ebb5a76-a5d5-44d5-83bc-e7819735dea9: Pages # Pages
     3fff2238-67a0-4baf-afcf-9136097514c6: Body # Body
-    7aee0edb-669b-401d-a0ba-26b5b39140e7: Navigation # Navigation
+    7aee0edb-669b-401d-a0ba-26b5b39140e7: Navigatie # Navigatie
     78dbc335-db89-40cb-8728-baf565f33afb: Pagina’s # Pagina’s
     080b19fc-094e-4209-808f-bb3ab8fa909b: Statistics # Statistics
     254d3d32-c63f-4944-bb6d-9a5bdac19b4b: Images # Images
     7358c07a-9a2e-4db0-bd56-c23f083a5a93: Default # Default
     41563a1a-12de-4c00-87c0-062f43ed7439: 'Public Schema' # Public Schema
     62187b9e-53db-4f2a-a019-4a83bdcb6d79: Default # Default
-    669027a6-63bc-41f5-8033-e011d6a0bace: Navigation # Navigation
+    669027a6-63bc-41f5-8033-e011d6a0bace: Navigatie # Navigatie
+    733155d1-0a77-4b75-8aea-c4923a0a8ab4: Pagina # Pagina
     880510ac-f9a0-4d15-b36e-3a24c905c5e1: Heading # Heading
     afd424ac-0ad8-4029-9ed5-95161ad5a113: Common # Common
     bb547ad8-d19b-4dc8-b723-39dfb5bd836c: Text # Text
@@ -44,6 +45,7 @@ meta:
     c83fc930-f070-4cca-a8e3-24dec242c1a1: Boilerplate # Boilerplate
     cc7cc153-c4ab-4663-a4fb-968ed21e196b: Boilerplate # Boilerplate
     dbd77723-f462-4861-bfc6-2967b886f853: Statistics # Statistics
+    e63aeb12-a3da-49b2-8900-f6ae7c0f68ab: 'Openen in nieuwe tab?' # Openen in nieuwe tab?
     ed0b67b6-5d65-4562-98ad-ff75af302540: URL # URL
 plugins:
   aws-s3:

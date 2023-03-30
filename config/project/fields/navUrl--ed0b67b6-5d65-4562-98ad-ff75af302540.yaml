@@ -1,6 +1,6 @@
 columnSuffix: tzbcoeei
 contentColumnType: text
-fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigation
+fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigatie
 handle: navUrl
 instructions: null
 name: URL
@@ -12,7 +12,7 @@ settings:
   columnType: null
   initialRows: 4
   multiline: false
-  placeholder: /about
+  placeholder: 'https://'
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

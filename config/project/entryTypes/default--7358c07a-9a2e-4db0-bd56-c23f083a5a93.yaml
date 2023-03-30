@@ -31,7 +31,39 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: ed0b67b6-5d65-4562-98ad-ff75af302540 # URL
+                  operator: empty
+                  uid: ca61e8b5-370f-4e3c-a05f-737609b75d1c
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 733155d1-0a77-4b75-8aea-c4923a0a8ab4 # Pagina
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3f58dcb-b5c0-4489-aca1-21c89ae6d549
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\RelationalFieldConditionRule
+                  elementId: null
+                  fieldUid: 733155d1-0a77-4b75-8aea-c4923a0a8ab4 # Pagina
+                  operator: empty
+                  uid: 29e660b0-07b6-43f4-bf16-06bbe449dd2a
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: ed0b67b6-5d65-4562-98ad-ff75af302540 # URL
             instructions: null
             label: null
@@ -42,13 +74,35 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: ed0b67b6-5d65-4562-98ad-ff75af302540 # URL
+                  operator: notempty
+                  uid: cf8d8545-5e13-4358-ad2a-f0b52bb6992b
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: e63aeb12-a3da-49b2-8900-f6ae7c0f68ab # Openen in nieuwe tab?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 558bc5e8-bdb9-4a94-a787-6f2767ee7760
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 9e15af94-0b01-40f3-a6ad-cee8e67f2b72
         userCondition: null
 handle: default
 hasTitleField: true
 name: Default
-section: 7aee0edb-669b-401d-a0ba-26b5b39140e7 # Navigation
+section: 7aee0edb-669b-401d-a0ba-26b5b39140e7 # Navigatie
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

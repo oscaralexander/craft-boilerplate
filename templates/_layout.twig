@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+    ╭──────────────────────────────────────────╮
+    │ ≡ Design & development                   │
+    ╞══════════════════════════════════════════╡
+    │                                          │
+    │ OSCAR ALEXANDER                          │
+    │ oscaralexander.com                       │
+    ├──────────┬───────────────────────────────┤
+    │ Email    │ mail@oscaralexander.com       │
+    ╰──────────┴───────────────────────────────╯
+-->
+<html lang="{{ craft.app.language }}">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="initial-scale=1.0,viewport-fit=cover,width=device-width" name="viewport">
+        <title>OA Craft CMS Boilerplate</title>
+        {{ craft.vite.script('src/js/index.ts', false) }}
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -8,9 +8,13 @@
 `ddev craft setup/welcome`  
 `ddev exec npm install`
 
+# Delete DDEV project
+
+`ddev delete {project_name}`
+
 # Database management
 
-phpMyAdmin: https://{sitename}.ddev.site:8037 or ddev sequelpro
+phpMyAdmin: https://{sitename}.ddev.site:8037 or `ddev sequelpro`
 
 # Vite
 

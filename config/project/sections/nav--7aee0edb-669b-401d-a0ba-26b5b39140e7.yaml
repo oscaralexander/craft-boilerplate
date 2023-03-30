@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: false
 handle: nav
-name: Navigation
+name: Navigatie
 previewTargets:
   -
     __assoc__:
