@@ -1,11 +1,11 @@
 # Project initialization with DDEV
-ddev config --project-type=craftcms
-ddev composer create -y --no-scripts --no-install craftcms/craft
-ddev start
-ddev composer install
-ddev snapshot restore --latest
-// ddev craft setup/welcome
-ddev exec npm install
+`ddev config --project-name={project_name} --project-type=craftcms`  
+`ddev composer create -y --no-scripts --no-install craftcms/craft`  
+`ddev start`  
+`ddev composer install`  
+`ddev snapshot restore --latest`  
+`ddev craft setup/welcome`  
+`ddev exec npm install`
 
 # Database management
 phpMyAdmin: https://{sitename}.ddev.site:8037
