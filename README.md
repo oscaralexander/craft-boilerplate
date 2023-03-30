@@ -1,11 +1,16 @@
 # Project initialization with DDEV
 
-Run `make init` to initialize a new installation.
+`ddev config --project-name={project_name} --project-type=craftcms`  
+`ddev composer create -y --no-scripts --no-install craftcms/craft`  
+`ddev start`  
+`ddev composer install`  
+`ddev snapshot restore --latest`  
+`ddev craft setup/welcome`  
+`ddev exec npm install`
 
 # Database management
 
-phpMyAdmin: https://{project_name}.ddev.site:8037
-or ddev sequelpro
+phpMyAdmin: https://{sitename}.ddev.site:8037 or ddev sequelpro
 
 # Vite
 
