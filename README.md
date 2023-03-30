@@ -5,7 +5,7 @@
 `ddev start`  
 `ddev composer install`  
 `ddev snapshot restore --latest`  
-`ddev craft setup/welcome`  
+`ddev craft setup/security-key` to generate a unique security key
 `ddev exec npm install`
 
 # Delete DDEV project
