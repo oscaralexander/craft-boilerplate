@@ -1,9 +1,9 @@
 {
   "require": {
-    "craftcms/aws-s3": "2.0.1",
-    "craftcms/cms": "^4.2.7",
-    "craftcms/redactor": "3.0.2",
-    "nystudio107/craft-vite": "^4.0",
+    "craftcms/aws-s3": "2.0.3",
+    "craftcms/cms": "4.4.4",
+    "craftcms/redactor": "3.0.4",
+    "nystudio107/craft-vite": "4.0.5",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

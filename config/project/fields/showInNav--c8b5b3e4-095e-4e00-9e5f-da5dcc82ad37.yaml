@@ -1,0 +1,14 @@
+columnSuffix: yertsrzp
+contentColumnType: boolean
+fieldGroup: 2ebb5a76-a5d5-44d5-83bc-e7819735dea9 # Pages
+handle: showInNav
+instructions: null
+name: 'Tonen in navigatie?'
+searchable: false
+settings:
+  default: true
+  offLabel: Nee
+  onLabel: Ja
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

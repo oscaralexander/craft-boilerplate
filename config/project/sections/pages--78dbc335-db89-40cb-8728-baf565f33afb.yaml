@@ -1,7 +1,7 @@
 defaultPlacement: end
-enableVersioning: true
+enableVersioning: false
 handle: pages
-name: Pages
+name: Pagina’s
 previewTargets:
   -
     __assoc__:
@@ -20,7 +20,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: pages/_entry
-    uriFormat: '{slug}'
+    uriFormat: '{parent.slug}/{slug}'
 structure:
   maxLevels: null
   uid: 428b7896-1051-4ea7-949b-2fa7523a7516

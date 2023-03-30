@@ -5,3 +5,7 @@ scope:
   - 'elements.drafts:read'
   - 'elements.revisions:read'
   - 'elements.inactive:read'
+  - 'sections.7aee0edb-669b-401d-a0ba-26b5b39140e7:read' # Navigation
+  - 'entrytypes.7358c07a-9a2e-4db0-bd56-c23f083a5a93:read' # Default
+  - 'sections.78dbc335-db89-40cb-8728-baf565f33afb:read' # Pagina’s
+  - 'entrytypes.62187b9e-53db-4f2a-a019-4a83bdcb6d79:read' # Default

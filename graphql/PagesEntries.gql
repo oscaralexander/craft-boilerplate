@@ -1,6 +1,8 @@
 query PagesEntries {
   pagesEntries {
     ... on pages_default_Entry {
+      id
+      title
       url
       uri
     }
