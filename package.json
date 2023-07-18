@@ -2,7 +2,9 @@
     "author": "CraftQuest",
     "version": "0.0.1",
     "dependencies": {
-        "petite-vue": "^0.4.1"
+        "gsap": "^3.12.2",
+        "petite-vue": "^0.4.1",
+        "reset-css": "^5.0.1"
     },
     "devDependencies": {
         "autoprefixer": "^10.4",

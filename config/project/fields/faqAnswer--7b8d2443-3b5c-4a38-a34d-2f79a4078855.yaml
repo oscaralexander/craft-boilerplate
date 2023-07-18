@@ -1,0 +1,27 @@
+columnSuffix: yiddhdmm
+contentColumnType: text
+fieldGroup: 9b2fcfef-966a-47e6-ba58-705f09ff1135 # Veelgestelde vragen
+handle: faqAnswer
+instructions: null
+name: Antwoord
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Simple.json
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

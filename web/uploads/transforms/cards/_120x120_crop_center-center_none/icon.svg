@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMidYMid slice" width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" id="a" viewBox="0 0 256 256">
+  <circle cx="128" cy="128" r="128" fill="#fff"></circle>
+  <g id="b">
+    <path id="c" d="m109.53846,78.76923c0-16.99338-13.77585-30.76923-30.76923-30.76923s-30.76923,13.77585-30.76923,30.76923v92.30769l30.76923,36.92308,30.76923-36.92308v-92.30769Z" fill="none" stroke="#404" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+    <path id="d" d="m48,97.23077h61.53846" fill="none" stroke="#404" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+    <path id="e" d="m134.15385,72.61538c0-13.5947,11.02068-24.61538,24.61538-24.61538s24.61538,11.02068,24.61538,24.61538v98.46154c0,6.79736-5.51034,12.30769-12.30769,12.30769h-24.61538c-6.79735,0-12.30769-5.51034-12.30769-12.30769v-98.46154Z" fill="none" stroke="#404" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+    <path id="f" d="m158.76923,183.38462v24.61538" fill="none" stroke="#404" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+    <path id="g" d="m134.15385,97.23077h61.53846c6.79736,0,12.30769,5.51034,12.30769,12.30769v49.23077" fill="none" stroke="#404" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+  </g>
+</svg>

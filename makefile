@@ -1,5 +1,8 @@
 PROJECT_NAME=$(shell ddev describe | grep "Project: " | awk '{ print $$3 }')
 
+build:
+	ddev npm run build
+
 init: install info
 
 info:
@@ -16,6 +19,9 @@ install:
 	ddev php craft setup/security-key
 	ddev snapshot restore --latest
 	ddev exec npm install
+
+serve:
+	ddev npm run serve
 
 destroy:
 	ddev delete --omit-snapshot

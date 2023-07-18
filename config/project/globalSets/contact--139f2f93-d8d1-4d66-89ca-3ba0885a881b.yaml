@@ -1,0 +1,132 @@
+fieldLayouts:
+  112ffebb-85e5-45e5-95de-233e3df88e0d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0a5a9bd7-43da-4856-b51e-6677cab9f296 # E-mailadres
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d6658d9-7031-4750-af0e-22dc2a8ba336
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa42dff2-bdec-4290-bea5-29f1c1280a4c # Telefoonnummer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 97334cdf-da7c-4850-bd8c-bdce2351007c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d3d11d54-b421-456c-b23f-66bbd5f4a6c7 # Telefoonnummer mobiel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0c737fe-cb8a-4a99-8b0d-b80942c414bd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dd3b38d9-4c3f-4c93-826b-de2d3eebbcab # Telefoonnummer ondersteunt WhatsApp?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c5a1647-5a39-4e58-ba3c-33dfa551eaf8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 312a63de-3188-485d-98cc-c42508dc164d # Adres
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6124547e-ba38-405a-9872-3505e9c91935
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a746de10-74b5-43ba-ab22-14f4db56b84c # Postcode
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d1dd4d7d-a7a6-40a8-ac92-32806e824037
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7c2b7860-1841-4a8f-94d2-a33ea1bc766e # Plaatsnaam
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea676080-bbc9-48e1-9eb5-414920db81b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c2c25cea-69d9-472d-9103-d881c585f681 # Land
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7de66871-314b-4ea0-b828-da2bb7f947c5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 924f5232-6054-4685-9c91-7a106c55a5bd # Google Maps URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 177e1f61-45d0-43d0-ab5f-21940f3a20c3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3ed3b13b-dbfa-48d9-8ecf-de8994bc5d97 # Openingstijden
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14e85386-50c3-4ea0-a3ba-919e26c7fac0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: 288b5aaf-baae-4107-a419-58e33d3eb7dc
+        userCondition: null
+handle: contact
+name: Contact
+sortOrder: 1

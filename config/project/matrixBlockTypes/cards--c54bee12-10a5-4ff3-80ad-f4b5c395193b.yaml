@@ -1,0 +1,308 @@
+field: 3fff2238-67a0-4baf-afcf-9136097514c6 # Body
+fieldLayouts:
+  f3308e78-2e90-47ac-b4cd-0f9d5798d210:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 26950af4-cc33-459f-996c-087f1d41ae4d # Text alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 591cc09b-dc63-4baf-9f2e-895114a27165
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: df6be5c5-efca-48eb-9988-cfdb1be6bddc # Card text alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9c36a079-0552-4e64-bfac-57ef3d7ca7fc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 69fe189c-0e5e-4247-915e-dbe44bf4eb85 # Theme
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a74cf8b8-73b3-4b08-b4be-43cb6a0dc98b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3c8658ca-1cc0-4151-82b5-e208636e6e44 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0460f743-3ff4-4ebd-b15b-e7900ed34b31
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0e1062a8-83be-400d-b6e2-163695983126 # Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dd1fc229-a032-4c92-9c4d-f49c6d8cb5e0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dd5eba1d-3305-4fe7-bdc6-8127d16350e6 # Cards
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f12e1160-4ff3-4b86-a947-8ff84bb5777b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7a0418b9-c69f-4e63-81f0-ef668270246b
+        userCondition: null
+fields:
+  0e1062a8-83be-400d-b6e2-163695983126: # Intro
+    columnSuffix: akmvtbsn
+    contentColumnType: text
+    fieldGroup: null
+    handle: intro
+    instructions: null
+    name: Intro
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  3c8658ca-1cc0-4151-82b5-e208636e6e44: # Heading
+    columnSuffix: oeiubxcj
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  69fe189c-0e5e-4247-915e-dbe44bf4eb85: # Theme
+    columnSuffix: ecqvbaut
+    contentColumnType: string
+    fieldGroup: null
+    handle: theme
+    instructions: null
+    name: Theme
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      selectionLabel: 'Select theme'
+      showSiteMenu: false
+      source: 'group:84abf42b-4f2b-48ba-8f3d-12a0b7cc81d5' # Themes
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  26950af4-cc33-459f-996c-087f1d41ae4d: # Text alignment
+    columnSuffix: mkndysbx
+    contentColumnType: string
+    fieldGroup: null
+    handle: textAlignment
+    instructions: null
+    name: 'Text alignment'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  dd5eba1d-3305-4fe7-bdc6-8127d16350e6: # Cards
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cards
+    instructions: null
+    name: Cards
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 941888698
+      columns:
+        __assoc__:
+          -
+            - 59d081d5-cd03-43df-bbd6-e234b893d957 # Image
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 712b9330-141c-4892-8dbb-01b703461506 # Image is icon?
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 1c5e7d81-1eee-4876-ad6b-d4d8f61eec8a # Kop
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - a6a4b4c6-b08f-4905-8cc9-a11a097049ed # Body
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - acc79d76-7a36-4da7-bc0f-c897bbd92200 # CTA tekst
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 9e06412a-b5c9-4cfc-abaf-16a4b576787a # CTA URL
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 56f538eb-89c8-4352-962f-6e0dc272dcf1 # CTA type
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 4d8bbcc7-d9f8-4612-a192-de525fbcf941 # Theme
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_2_cards}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  df6be5c5-efca-48eb-9988-cfdb1be6bddc: # Card text alignment
+    columnSuffix: bpetarjk
+    contentColumnType: string
+    fieldGroup: null
+    handle: cardTextAlignment
+    instructions: null
+    name: 'Card text alignment'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: cards
+name: Cards
+sortOrder: 2

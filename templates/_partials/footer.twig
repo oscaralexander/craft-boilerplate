@@ -1,0 +1,73 @@
+<footer class="footer h-card u-inverted">
+    <div class="wrapper">
+        <div class="grid">
+            <div class="grid__col"></div>
+            <div class="grid__col">
+                <h4>Contact</h4>
+                {% if contact.contactEmail %}
+                    <a class="u-email" href="mailto:{{ contact.contactEmail }}">{{ contact.contactEmail }}</a><br>
+                {% endif %}
+                {% if contact.contactPhone %}
+                    <a class="p-tel" href="tel:{{ contact.contactPhone|replace("(0)", "")|replace(" ", "") }}">{{ contact.contactPhone }}</a><br>
+                {% endif %}
+                {% if contact.contactPhoneMobile %}
+                    {% set cleanPhone = contact.contactPhoneMobile|replace("+", "")|replace("(0)", "")|replace(" ", "") %}
+                    <a class="p-tel" href="tel:{{ cleanPhone }}">{{ contact.contactPhoneMobile }}</a>
+                {% endif %}
+                <ul class="footer__socials">
+                    {% for url in socials.socialUrls %}
+                        <li><a href="{{ url.url }}" target="_blank"><svg class="footer__socialsIcon"><use xlink:href="/assets/img/icons.svg#{{ url.platform }}"></use></svg></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="grid__col">
+                <h4>Adres</h4>
+                {% if contact.contactGoogleMapsUrl %}
+                    <a href="{{ contact.contactGoogleMapsUrl }}" target="_blank">
+                {% endif %}
+                {% if contact.contactAddress %}
+                    <span class="p-street-address">{{ contact.contactAddress }}</span><br>
+                {% endif %}
+                {% if contact.contactPostalCode %}
+                    <span class="p-postal-code">{{ contact.contactPostalCode }}</span>
+                {% endif %}
+                {% if contact.contactCity %}
+                    <span class="p-locality">{{ contact.contactCity }}</span><br>
+                {% endif %}
+                {% if contact.contactCountry %}
+                    <span class="p-country-name">{{ contact.contactCountry }}</span>
+                {% endif %}
+                {% if contact.contactGoogleMapsUrl %}
+                    </a>
+                {% endif %}
+                {% if footer.footerIsShowOpeningHours %}
+                    <h4>Openingstijden</h4>
+                    <table>
+                        {% for day in contact.contactOpeningHours %}
+                            <tr>
+                                <th scope="row">{{ day.day }}</th>
+                                <td class="u-text-tabular">
+                                    {% if not day.isClosed and day.timeOpens %}
+                                        {{ day.timeOpens|date("H:i") }} &ndash; {{ day.timeCloses|date("H:i") }}
+                                    {% else %}
+                                        Gesloten
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% endif %}
+            </div>
+            <div class="grid__col">
+                {% if footer.footerKvkNumber %}
+                    KVK {{ footer.footerKvkNumber }}<br>
+                {% endif %}
+                {% if footer.footerVatId %}
+                    BTW {{ footer.footerVatId }}<br>
+                {% endif %}
+            </div>
+        </div>
+        &copy; {{ now|date("Y") }}, <a href="{{ siteUrl }}" class="p-name u-url">{{ systemName }}</a>.
+        Alle rechten voorbehouden.
+    </div>
+</footer>

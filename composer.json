@@ -1,9 +1,11 @@
 {
   "require": {
+    "carlcs/craft-redactorcustomstyles": "4.0.3",
     "craftcms/aws-s3": "2.0.3",
-    "craftcms/cms": "4.4.5",
+    "craftcms/cms": "4.4.15",
     "craftcms/redactor": "3.0.4",
-    "nystudio107/craft-vite": "4.0.5",
+    "nystudio107/craft-vite": "4.0.6",
+    "verbb/super-table": "3.0.9",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

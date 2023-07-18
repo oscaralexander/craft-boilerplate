@@ -1,0 +1,19 @@
+columnSuffix: zxjfqzne
+contentColumnType: text
+fieldGroup: 49d34025-0f83-454a-8588-cb32a91bf2b6 # SEO
+handle: seoTitle
+instructions: null
+name: Titel
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

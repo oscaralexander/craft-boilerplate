@@ -1,0 +1,55 @@
+fieldLayouts:
+  a5944c72-e4dc-4d0b-895b-c023cef8ed09:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Vraag
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3c35df3f-cf14-4281-8e52-dfe4196bd238
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7b8d2443-3b5c-4a38-a34d-2f79a4078855 # Antwoord
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: deec2d0b-6cc4-4e46-8d66-74834f034228
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 0573be78-86c3-40b9-8cd0-e6b7895a1a91
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Standaard
+section: 39bd6e5b-ffc3-4f8a-a7f0-09c2872ca6ca # Veelgestelde vragen
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

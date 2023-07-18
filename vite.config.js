@@ -38,6 +38,7 @@ export default defineConfig(({ command }) => ({
             '@': path.resolve(__dirname, 'src'),
             '@css': path.resolve(__dirname, 'src/css'),
             '@js': path.resolve(__dirname, 'src/js'),
+            '@npm': path.resolve(__dirname, 'node_modules'),
         },
     },
     server: {

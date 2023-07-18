@@ -1,0 +1,13 @@
+.u-inverted {
+    background: rgb(var(--color-bg));
+    color: rgb(var(--color-text));
+}
+
+@for $i from 0 through 5 {
+    .u-theme#{$i} {
+        --color-text: var(--theme#{$i}-text-color);
+        --color-bg: var(--theme#{$i}-bg-color);
+        background: rgb(var(--color-bg));
+        color: rgb(var(--color-text));
+    }
+}

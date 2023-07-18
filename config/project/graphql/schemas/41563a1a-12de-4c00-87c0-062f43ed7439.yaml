@@ -1,7 +1,7 @@
 isPublic: true
 name: 'Public Schema'
 scope:
-  - 'sites.cc7cc153-c4ab-4663-a4fb-968ed21e196b:read' # Boilerplate
+  - 'sites.cc7cc153-c4ab-4663-a4fb-968ed21e196b:read' # Nederlands
   - 'elements.drafts:read'
   - 'elements.revisions:read'
   - 'elements.inactive:read'

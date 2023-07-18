@@ -1,0 +1,43 @@
+fieldLayouts:
+  c3db04a3-41ab-48a3-a793-4ddadfc0fc3e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 2af509da-7927-4706-8173-181e1023cc8d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 1b20b377-398b-4121-a3c9-22a1fb45031e
+        userCondition: null
+fs: local
+handle: files
+name: Bestanden
+sortOrder: 3
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: local
+transformSubpath: ''

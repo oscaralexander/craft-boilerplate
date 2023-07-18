@@ -1,0 +1,36 @@
+fieldLayouts:
+  f5239a14-6bbf-41f2-b286-44d6d3820e75:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 639598a5-664a-4307-a97c-723d11337ab3 # Knop label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fea571d5-d158-475e-a5cc-c27f7e0726a0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c87f9118-55b1-4877-ab20-220c3c67c6b3 # Knop URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3000fc8d-5053-499a-b34c-919a96cad80b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Navigatiebalk
+        uid: 63f40a74-db50-4287-8406-d1f0a5abefff
+        userCondition: null
+handle: navBar
+name: Navigatiebalk
+sortOrder: 4

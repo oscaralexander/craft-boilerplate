@@ -1,0 +1,19 @@
+columnSuffix: pigqipzx
+contentColumnType: text
+fieldGroup: 1f0cfe39-4ba4-4415-9a88-d4f5dc3f11df # Contact
+handle: contactGoogleMapsUrl
+instructions: null
+name: 'Google Maps URL'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: 'https://goo.gl/maps/...'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

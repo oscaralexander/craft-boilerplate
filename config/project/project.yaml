@@ -1,52 +1,109 @@
-dateModified: 1680170109
+dateModified: 1689661146
 email:
   fromEmail: alex.griffioen@gmail.com
   fromName: Boilerplate
   transportType: craft\mail\transportadapters\Sendmail
 fs:
-  s3:
-    hasUrls: false
-    name: S3
+  local:
+    hasUrls: true
+    name: Lokaal
     settings:
-      addSubfolderToRootUrl: true
-      autoFocalPoint: false
-      bucket: oa-craftcms
-      bucketSelectionMode: choose
-      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
-      cfPrefix: $CLOUDFRONT_PATH_PREFIX
-      expires: '1 days'
-      keyId: $S3_KEY_ID
-      makeUploadsPublic: true
-      region: eu-central-1
-      secret: $S3_SECRET
-      storageClass: ''
-      subfolder: ''
-    type: craft\awss3\Fs
-    url: 'https://s3.eu-central-1.amazonaws.com/oa-craftcms/'
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: /uploads
 meta:
   __names__:
+    0a5a9bd7-43da-4856-b51e-6677cab9f296: E-mailadres # E-mailadres
     0dc4b461-7030-4bb1-a872-cc470ccba30f: Eyebrow # Eyebrow
+    0dcac99b-80d8-400f-bdf3-03077ececd2d: Heading # Heading
+    0e1062a8-83be-400d-b6e2-163695983126: Intro # Intro
     00f2779c-6fe4-4a8c-824c-1771170a5553: Source # Source
+    1bc7542f-171a-432e-84ac-804fd81a12f3: KVK-nummer # KVK-nummer
+    1c5e7d81-1eee-4876-ad6b-d4d8f61eec8a: Kop # Kop
+    1f0cfe39-4ba4-4415-9a88-d4f5dc3f11df: Contact # Contact
     2ebb5a76-a5d5-44d5-83bc-e7819735dea9: Pages # Pages
+    2fca2fb6-1ca4-438f-ae43-7d4cd6fcd003: Text # Text
+    3b3101e9-17fd-4d3a-a9ae-34f009753bd5: Intro # Intro
+    3c8658ca-1cc0-4151-82b5-e208636e6e44: Heading # Heading
+    3e8d6aeb-abf5-4da6-af23-c84b3dc8bf34: Image # Image
+    3ed3b13b-dbfa-48d9-8ecf-de8994bc5d97: Openingstijden # Openingstijden
+    3fa4ede3-631d-4efb-990a-d342df9724bf: Text # Text
     3fff2238-67a0-4baf-afcf-9136097514c6: Body # Body
+    4d8bbcc7-d9f8-4612-a192-de525fbcf941: Theme # Theme
+    4f2903fe-1f6d-4bfa-9f05-56b4c7bc7c8e: Footer # Footer
     7aee0edb-669b-401d-a0ba-26b5b39140e7: Navigatie # Navigatie
+    7b5b569d-b23a-4eeb-a69b-11470ae309bd: Omschrijving # Omschrijving
+    7b8d2443-3b5c-4a38-a34d-2f79a4078855: Antwoord # Antwoord
+    7c2b7860-1841-4a8f-94d2-a33ea1bc766e: Plaatsnaam # Plaatsnaam
+    7c52c4b9-426b-4e12-bbfc-3fa09b93360e: 'Image placement' # Image placement
+    7e94c4b3-3d22-4fe7-9585-137c97994807: 'Text position' # Text position
+    8cbeb7cb-5177-4598-bd22-e6622faf3994: URLs # URLs
+    9b2fcfef-966a-47e6-ba58-705f09ff1135: 'Veelgestelde vragen' # Veelgestelde vragen
+    9d562cf3-1231-4c00-812b-7ffeee186f40: Theme # Theme
+    9e06412a-b5c9-4cfc-abaf-16a4b576787a: 'CTA URL' # CTA URL
+    032e3962-5ec0-4e41-8589-537def591195: 'Text & Media' # Text & Media
+    39bd6e5b-ffc3-4f8a-a7f0-09c2872ca6ca: 'Veelgestelde vragen' # Veelgestelde vragen
+    49d34025-0f83-454a-8588-cb32a91bf2b6: SEO # SEO
+    56f538eb-89c8-4352-962f-6e0dc272dcf1: 'CTA type' # CTA type
+    59d081d5-cd03-43df-bbd6-e234b893d957: Image # Image
+    62a09051-f09f-4b57-8fb1-e5139cddfda6: Bestanden # Bestanden
+    69fe189c-0e5e-4247-915e-dbe44bf4eb85: Theme # Theme
     78dbc335-db89-40cb-8728-baf565f33afb: Pagina’s # Pagina’s
+    78f88613-ac38-4469-a466-6ac9e39bd5cf: Standaard # Standaard
     080b19fc-094e-4209-808f-bb3ab8fa909b: Statistics # Statistics
+    83d5e6a0-451a-4e87-87ef-29a82f0cb074: Socials # Socials
+    84abf42b-4f2b-48ba-8f3d-12a0b7cc81d5: Themes # Themes
+    99c7474b-ffe8-4c89-abeb-7b5be87f6194: 'Openingstijden tonen?' # Openingstijden tonen?
+    139f2f93-d8d1-4d66-89ca-3ba0885a881b: Contact # Contact
     254d3d32-c63f-4944-bb6d-9a5bdac19b4b: Images # Images
+    312a63de-3188-485d-98cc-c42508dc164d: Adres # Adres
+    712b9330-141c-4892-8dbb-01b703461506: 'Image is icon?' # Image is icon?
+    924f5232-6054-4685-9c91-7a106c55a5bd: 'Google Maps URL' # Google Maps URL
+    3388a7c9-2d01-42e0-8dc0-f0b85a08fff9: Tekstkleur # Tekstkleur
     7358c07a-9a2e-4db0-bd56-c23f083a5a93: Default # Default
+    26950af4-cc33-459f-996c-087f1d41ae4d: 'Text alignment' # Text alignment
     41563a1a-12de-4c00-87c0-062f43ed7439: 'Public Schema' # Public Schema
     62187b9e-53db-4f2a-a019-4a83bdcb6d79: Default # Default
+    75983db2-9b03-4e59-a182-b3dd6c1f84c6: Footer # Footer
+    639598a5-664a-4307-a97c-723d11337ab3: 'Knop label' # Knop label
     669027a6-63bc-41f5-8033-e011d6a0bace: Navigatie # Navigatie
     733155d1-0a77-4b75-8aea-c4923a0a8ab4: Pagina # Pagina
     880510ac-f9a0-4d15-b36e-3a24c905c5e1: Heading # Heading
+    0938776e-976d-4802-a328-43539a1dd1f2: Achtergrondkleur # Achtergrondkleur
+    5670711d-a93a-4e98-9710-ef6506090fe4: Navigatiebalk # Navigatiebalk
+    a6a4b4c6-b08f-4905-8cc9-a11a097049ed: Body # Body
+    a7a87b13-087a-425b-81b5-6844975e7ff8: Text # Text
+    a7e02d9a-abd3-449d-abe2-5a7e9c7dde25: 'Embed HTML' # Embed HTML
+    a85f0497-9c4f-4203-9f11-f0274a7ac7d6: Navigatiebalk # Navigatiebalk
+    a649e90b-4a92-4803-8103-bd91e9b552ff: Heading # Heading
+    a746de10-74b5-43ba-ab22-14f4db56b84c: Postcode # Postcode
+    aa28ed1f-a31e-4cde-958e-65b557b9920e: Socials # Socials
+    aa42dff2-bdec-4290-bea5-29f1c1280a4c: Telefoonnummer # Telefoonnummer
+    acc79d76-7a36-4da7-bc0f-c897bbd92200: 'CTA tekst' # CTA tekst
+    af0f230c-8c47-4726-873c-6f20638f2259: Theme # Theme
     afd424ac-0ad8-4029-9ed5-95161ad5a113: Common # Common
+    b26dd65b-e4f0-477c-a48f-377a9fdb98e9: CTAs # CTAs
+    b47a0b4b-511e-4a91-8a53-9a91631dc125: Titel # Titel
+    ba56a0dc-4d5a-452f-ac8a-f2f1818c6a10: Links # Links
     bb547ad8-d19b-4dc8-b723-39dfb5bd836c: Text # Text
+    c2c25cea-69d9-472d-9103-d881c585f681: Land # Land
     c8b5b3e4-095e-4e00-9e5f-da5dcc82ad37: 'Tonen in navigatie?' # Tonen in navigatie?
+    c54bee12-10a5-4ff3-80ad-f4b5c395193b: Cards # Cards
+    c64df7e3-a993-46f7-9510-fa4ac9bcff1e: English # English
     c83fc930-f070-4cca-a8e3-24dec242c1a1: Boilerplate # Boilerplate
-    cc7cc153-c4ab-4663-a4fb-968ed21e196b: Boilerplate # Boilerplate
+    c87f9118-55b1-4877-ab20-220c3c67c6b3: 'Knop URL' # Knop URL
+    cc7cc153-c4ab-4663-a4fb-968ed21e196b: Nederlands # Nederlands
+    d3d11d54-b421-456c-b23f-66bbd5f4a6c7: 'Telefoonnummer mobiel' # Telefoonnummer mobiel
     dbd77723-f462-4861-bfc6-2967b886f853: Statistics # Statistics
+    dd3b38d9-4c3f-4c93-826b-de2d3eebbcab: 'Telefoonnummer ondersteunt WhatsApp?' # Telefoonnummer ondersteunt WhatsApp?
+    dd5eba1d-3305-4fe7-bdc6-8127d16350e6: Cards # Cards
+    df6be5c5-efca-48eb-9988-cfdb1be6bddc: 'Card text alignment' # Card text alignment
     e63aeb12-a3da-49b2-8900-f6ae7c0f68ab: 'Openen in nieuwe tab?' # Openen in nieuwe tab?
     ed0b67b6-5d65-4562-98ad-ff75af302540: URL # URL
+    f2fc8df2-38c9-47b2-99dd-9c46ce03e1ff: Tekstkleur # Tekstkleur
+    f8cebeb1-c830-436d-9fb5-5ec881581221: 'Embed aspect ratio' # Embed aspect ratio
+    f19700bf-22ee-414e-b221-8ff7860de80a: Btw-identificatienummer # Btw-identificatienummer
+    f76704a8-1e0a-452c-b238-06c89c9f99ab: Intro # Intro
 plugins:
   aws-s3:
     edition: standard
@@ -56,6 +113,14 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
   vite:
     edition: standard
     enabled: true
@@ -64,8 +129,9 @@ system:
   edition: pro
   live: true
   name: Boilerplate
+  retryDuration: null
   schemaVersion: 4.4.0.4
-  timeZone: America/Los_Angeles
+  timeZone: Europe/Amsterdam
 users:
   allowPublicRegistration: false
   defaultGroup: null

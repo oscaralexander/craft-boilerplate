@@ -1,0 +1,34 @@
+{
+  "formatting": [
+    "p",
+    "blockquote",
+    "h4"
+  ],
+  "formattingAdd": {
+    "p-large": {
+      "api": "module.block.format",
+      "args": {
+        "class": "large",
+        "tag": "p"
+      },
+      "title": "Large"
+    }
+  },
+  "buttons": [
+    "html",
+    "formatting",
+    "bold",
+    "italic",
+    "unorderedlist",
+    "orderedlist",
+    "link",
+    "image",
+    "video"
+  ],
+  "plugins": [
+    "customstyles",
+    "fullscreen"
+  ],
+  "linkNewTab": true,
+  "toolbarFixed": true
+}

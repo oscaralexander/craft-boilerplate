@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  ea327264-8b98-419c-94ba-b5220930da86:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 375e16a7-212b-4bd0-bdae-2fcbb263e6b9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 69d24539-5b6c-4d6d-8001-20e42b6d206d
+        userCondition: null
+handle: themes
+name: Themes
+siteSettings:
+  c64df7e3-a993-46f7-9510-fa4ac9bcff1e: # English
+    hasUrls: true
+    template: null
+    uriFormat: 'themes/{slug}'
+  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # Nederlands
+    hasUrls: true
+    template: null
+    uriFormat: 'themes/{slug}'
+structure:
+  maxLevels: null
+  uid: 4a32699a-78a9-4dcc-bb53-b180702dd652

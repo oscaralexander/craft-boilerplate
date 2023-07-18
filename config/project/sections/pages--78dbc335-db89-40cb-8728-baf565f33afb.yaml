@@ -16,7 +16,12 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # Boilerplate
+  c64df7e3-a993-46f7-9510-fa4ac9bcff1e: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry
+    uriFormat: '{parent.slug}/{slug}'
+  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # Nederlands
     enabledByDefault: true
     hasUrls: true
     template: pages/_entry

@@ -1,0 +1,96 @@
+<input class="menuToggle" id="menuToggle" name="menu_toggle" type="checkbox">
+<nav class="nav js-nav">
+    <div class="announcement js-announcement">
+        <a href="#">Scoor gratis tickets voor de Summer Aperitivo 🥂</a>
+        <button class="announcement__close js-announcementClose" title="Sluiten"></button>
+    </div>
+    <div class="wrapper">
+        <label class="nav__menuToggle" for="menuToggle" tabindex="0"><div></div></label>
+        <a class="nav__logo" href="{{ siteUrl }}" title="{{ "return_to_home"|t }}">{{ systemName }}</a>
+        <div class="nav__drawer">
+            <ul class="nav__menu">
+                {% set pages = craft.entries().section("nav").all() %}
+                {% nav page in pages %}
+                    {% set navPage = page.navPage.one() %}
+                    <li class="nav__menuItem">
+                        {% if page.children|length %}
+                            <input class="nav__subMenuToggle js-navSubMenuToggle" id="menuItem-{{ page.slug }}" type="checkbox">
+                        {% endif %}
+                        <div class="nav__menuItemInner">
+                            {% if navPage or page.navUrl %}
+                                {% if navPage %}
+                                    <a class="nav__menuLink {{ page.children|length ? "has-subMenu" : "" }}" href="{{ navPage.url }}" tabindex="0">{{ page.title }}</a>
+                                {% else %}
+                                    <a class="nav__menuLink {{ page.children|length ? "has-subMenu" : "" }}" href="{{ page.navUrl }}" tabindex="0">{{ page.title }}</a>
+                                {% endif %}
+                            {% else %}
+                                <label class="nav__menuLabel {{ page.children|length ? "has-subMenu" : "" }}" for="menuItem-{{ page.slug }}" tabindex="0">{{ page.title }}</label>
+                            {% endif %}
+                            {% if page.children|length %}
+                                <label class="nav__subMenuToggleLabel" for="menuItem-{{ page.slug }}"></label>
+                            {% endif %}
+                        </div>
+                        {% ifchildren %}
+                            <div class="nav__subMenuBox js-navSubMenuBox">
+                                <ul class="nav__subMenu">
+                                    {% children %}
+                                </ul>
+                            </div>
+                        {% endifchildren %}
+                    </li>
+                {% endnav %}
+                {% if navBar.navBarCtaLabel %}
+                    <li class="nav__menuCta">
+                        <a class="button" href="{{ navBar.navBarCtaUrl }}">{{ navBar.navBarCtaLabel }}</a>
+                    </li>
+                {% endif %}
+                {% if translations|length > 1 %}
+                    <li class="nav__menuLanguageSwitch">
+                        <div class="languageSwitch">
+                            <div class="material-symbols-rounded">language</div>
+                            <div class="languageSwitch__current">{{ currentSite.name }}</div>
+                            <select onchange="location.href=this.value;" tabindex="0">
+                                {% for translation in translations %}
+                                    {% set selected = (translation.langCode == currentSite.handle) ? "selected" : "" %}
+                                    <option {{ selected }} value="{{ translation.url|replace("home", "") }}">{{ translation.lang }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </li>
+                {% endif %}
+            </ul>
+            <ul class="nav__socials">
+                {% for url in socials.socialUrls %}
+                    <li><a class="nav__socialsLink" href="{{ url.url }}" target="_blank"><svg class="nav__socialsIcon"><use xlink:href="/assets/img/icons.svg#{{ url.platform }}"></use></svg></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="nav__right">
+            {% if translations|length > 1 %}
+                <div class="nav__languageSwitch">
+                    <div class="languageSwitch languageSwitch--short">
+                        <div class="material-symbols-rounded">language</div>
+                        <div class="languageSwitch__current">{{ currentSite.handle }}</div>
+                        <select onchange="location.href=this.value;" tabindex="0">
+                            {% for translation in translations %}
+                                {% set selected = (translation.langCode == currentSite.handle) ? "selected" : "" %}
+                                <option {{ selected }} value="{{ translation.url|replace("home", "") }}">{{ translation.lang }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            {% endif %}
+            {% if navBar.navBarCtaLabel %}
+                <div class="nav__cta">
+                    <a
+                        class="btn btn--primary"
+                        data-ga-event"nav_cta_click"
+                        data-ga-param-nav-cta-text="{{ navBar.navBarCtaLabel }}"
+                        href="{{ navBar.navBarCtaUrl }}"
+                    >{{ navBar.navBarCtaLabel }}</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="nav__overlay js-navOverlay"></div>
+</nav>

@@ -1,0 +1,36 @@
+.arrowLink {
+    align-items: center;
+    color: currentColor;
+    display: inline-flex;
+    font-family: var(--btn-font);
+    font-weight: var(--btn-font-weight);
+    line-height: var(--line-height-l);
+    gap: 0.5rem;
+    padding-right: 4px;
+    position: relative;
+    user-select: none;
+
+    &::after {
+        --mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16"><polyline points="6 2 12 8 6 14" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1.15"/><line y1="8" x2="12" y2="8" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1.15"/></svg>');
+        background: currentColor;
+        content: '';
+        display: block;
+        height: 16px;
+        -webkit-mask-image: var(--mask-image);
+        mask-image: var(--mask-image);
+        transition: transform var(--duration-m) ease-out;
+        width: 14px;
+    }
+
+    &:hover {
+        color: currentColor;
+
+        &::after {
+            transform: translate3d(4px, 0, 0);
+        }
+    }
+
+    &:active {
+        top: 1px;
+    }
+}

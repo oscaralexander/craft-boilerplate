@@ -1,0 +1,150 @@
+columnSuffix: rcemiyhp
+contentColumnType: text
+fieldGroup: 1f0cfe39-4ba4-4415-9a88-d4f5dc3f11df # Contact
+handle: contactOpeningHours
+instructions: null
+name: Openingstijden
+searchable: false
+settings:
+  addRowLabel: 'Dag toevoegen'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Dag
+            -
+              - handle
+              - day
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Openingstijd
+            -
+              - handle
+              - timeOpens
+            -
+              - width
+              - '128'
+            -
+              - type
+              - time
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - Sluitingstijd
+            -
+              - handle
+              - timeCloses
+            -
+              - width
+              - '128'
+            -
+              - type
+              - time
+      -
+        - col4
+        -
+          __assoc__:
+            -
+              - heading
+              - Gesloten
+            -
+              - handle
+              - isClosed
+            -
+              - width
+              - ''
+            -
+              - type
+              - lightswitch
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - Maandag
+        -
+          - col2
+          - '2023-04-24T10:00:00-07:00'
+        -
+          - col3
+          - '2023-04-24T18:00:00-07:00'
+        -
+          - col4
+          - ''
+    -
+      __assoc__:
+        -
+          - col1
+          - Dinsdag
+        -
+          - col2
+          - '2023-04-24T10:00:00-07:00'
+        -
+          - col3
+          - '2023-04-24T18:00:00-07:00'
+        -
+          - col4
+          - ''
+    -
+      __assoc__:
+        0:
+          - col1
+          - Woensdag
+        3:
+          - col4
+          - ''
+    -
+      __assoc__:
+        0:
+          - col1
+          - Donderdag
+        3:
+          - col4
+          - ''
+    -
+      __assoc__:
+        0:
+          - col1
+          - Vrijdag
+        3:
+          - col4
+          - ''
+    -
+      __assoc__:
+        0:
+          - col1
+          - Zaterdag
+        3:
+          - col4
+          - '1'
+    -
+      __assoc__:
+        0:
+          - col1
+          - Zondag
+        3:
+          - col4
+          - '1'
+  maxRows: 7
+  minRows: 7
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

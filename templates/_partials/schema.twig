@@ -1,0 +1,48 @@
+<script type="application/ld+json">
+    [{
+        "@context": "http:\/\/schema.org",
+        "@type": "WebSite",
+        "name": "{{ systemName }}",
+        "url": "{{ siteUrl }}"
+    },{
+        "@context": "http:\/\/schema.org",
+        "@type": "Organization",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "{{ contact.contactCountry }}",
+            "addressLocality": "{{ contact.contactCity }}",
+            "postalCode": "{{ contact.contactPostalCode }}",
+            "streetAddress": "{{ contact.contactAddress|replace("\n", " ") }}"
+        },
+        "email": "{{ contact.contactEmail }}",
+        "leiCode": "{{ footer.footerKvkNumber }}",
+        "name": "{{ systemName }}",
+        "openingHoursSpecification": [
+            {% set i = 0 %}
+            {% for day in contact.contactOpeningHours %}
+                {% if not day.isClosed and day.timeOpens %}
+                    {{ i > 0 ? "," : "" }}
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "closes":  "{{ day.timeCloses|date("H:i:s") }}",
+                        "dayOfWeek": "https://schema.org/{{ ("schema_" ~ day.day|lower)|t }}",
+                        "opens":  "{{ day.timeOpens|date("H:i:s") }}"
+                    }
+                    {% set i = i + 1 %}
+                {% endif %}
+            {% endfor %}
+        ],
+        "telephone": "{{ (contact.contactPhone ?? contact.contactPhoneMobile)|replace("(0)", "")|replace(" ", "") }}",
+        "url": "{{ siteUrl }}",
+        "vatID": "{{ footer.footerVatId }}"
+    },
+    {
+        "@context": "http:\/\/schema.org",
+        "@type": "WebPage",
+        "dateCreated": "{{ entry.dateCreated|date("Y-m-d H:i:s") }}",
+        "dateModified": "{{ entry.dateUpdated|date("Y-m-d H:i:s") }}",
+        "description": "{{ entry.seoDescription }}",
+        "name": "{{ entry.seoTitle ?? entry.title }}",
+        "url": "{{ entry.uri == "home" ? siteUrl : entry.url }}",
+    }]
+</script>

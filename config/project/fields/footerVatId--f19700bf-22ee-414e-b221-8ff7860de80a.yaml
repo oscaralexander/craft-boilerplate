@@ -1,0 +1,19 @@
+columnSuffix: ywmpwems
+contentColumnType: string(56)
+fieldGroup: 4f2903fe-1f6d-4bfa-9f05-56b4c7bc7c8e # Footer
+handle: footerVatId
+instructions: null
+name: Btw-identificatienummer
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 14
+  code: true
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: NL...B01
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,43 @@
+.block {
+    position: relative;
+    padding: var(--block-padding) 0;
+
+    @include screen-min(l) {
+        --block-padding: 8rem;
+
+        &.u-theme0 + &.u-theme0,
+        &.u-theme1 + &.u-theme1,
+        &.u-theme2 + &.u-theme2,
+        &.u-theme3 + &.u-theme3,
+        &.u-theme4 + &.u-theme4 {
+            padding-top: 0;
+        }
+    }
+
+    &__header {
+        margin-bottom: 4rem;
+        text-align: center;
+
+        .block--center & {
+        }
+    }
+
+    &__heading {
+        font-size: var(--font-size-xxl);
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__intro {
+        color: rgb(var(--color-text) / var(--text-alpha-mid));
+        font-size: var(--font-size-l);
+        line-height: var(--line-height-l);
+        margin-top: 1em;
+
+        &:empty {
+            display: none;
+        }
+    }
+}

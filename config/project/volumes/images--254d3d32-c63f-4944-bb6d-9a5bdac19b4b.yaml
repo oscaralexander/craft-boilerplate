@@ -33,11 +33,11 @@ fieldLayouts:
         name: Content
         uid: 414ba5c7-3599-4e52-8098-dd5bbda5c388
         userCondition: null
-fs: s3
+fs: local
 handle: images
 name: Images
 sortOrder: 1
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: s3
+transformFs: local
 transformSubpath: transforms

@@ -1,0 +1,64 @@
+.hero {
+    padding-top: 0 !important;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__content {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 1 / 5;
+        grid-row: 1;
+        margin: 4rem 0;
+        min-height: 50vh;
+        padding: 4rem 4rem 4rem 0;
+        z-index: 2;
+    }
+
+    &__heading {
+        font-size: var(--font-size-3xl);
+        margin-bottom: 4rem;
+    }
+
+    &__text {
+        font-size: var(--font-size-l);
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    &__ctas {
+        color: rgb(var(--btn-text-color));
+        display: flex;
+        gap: 1.5rem;
+
+        .button {
+            flex: 1;
+        }
+    }
+
+    &__images {
+        grid-column: 4 / 13;
+        grid-row: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__image {
+        inset: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    &__image img {
+        inset: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

@@ -1,0 +1,66 @@
+columnSuffix: sfbtahqi
+contentColumnType: text
+fieldGroup: 4f2903fe-1f6d-4bfa-9f05-56b4c7bc7c8e # Footer
+handle: footerLinks
+instructions: 'De kleine lettertjes. Denk aan Algemene Voorwaarden, Disclaimer, Privacybeleid, etc.'
+name: Links
+searchable: false
+settings:
+  addRowLabel: 'Link toevoegen'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Tekst
+            -
+              - handle
+              - text
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - URL
+            -
+              - handle
+              - url
+            -
+              - width
+              - ''
+            -
+              - type
+              - url
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Openen in nieuwe tab?'
+            -
+              - handle
+              - isNewTab
+            -
+              - width
+              - ''
+            -
+              - type
+              - lightswitch
+  defaults: null
+  maxRows: null
+  minRows: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

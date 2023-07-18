@@ -1,0 +1,78 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Reckless Neue';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/RecklessNeue-Regular.woff2') format('woff2'),
+        url('/assets/fonts/RecklessNeue-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'TT Commons Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/TTCommonsPro-Regular.woff2') format('woff2'),
+         url('/assets/fonts/TTCommonsPro-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'TT Commons Pro';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/assets/fonts/TTCommonsPro-Italic.woff2') format('woff2'),
+         url('/assets/fonts/TTCommonsPro-Italic.woff') format('woff');
+}
+
+:root {
+    --color-1: 0 0 0;
+}
+
+:root .redactor-styles {
+    color: rgb(var(--color-1)) !important;
+    font-family: sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+}
+
+:root .redactor-styles a {
+    box-shadow: inset 0 -1px 0 rgb(var(--color-1) / 50%) !important;
+    color: rgb(var(--color-1)) !important;
+    text-decoration: none !important;
+}
+
+:root .redactor-styles ol {
+    list-style-type: decimal !important;
+    margin: 0 0 1em 0 !important;
+    padding: 0 !important;
+}
+
+:root .redactor-styles ul {
+    list-style-type: disc !important;
+    margin: 0 0 1em 0 !important;
+    padding: 0 !important;
+}
+
+:root .redactor-styles ol li,
+:root .redactor-styles ul li {
+    margin-left: 1.75em !important;
+    padding-left: 0.5em !important;
+}
+
+:root .redactor-styles p {
+    margin: 0 0 1.25rem !important;
+    line-height: 1.5 !important;
+}
+
+:root .redactor-styles figure iframe {
+    aspect-ratio: 16/9;
+    height: auto;
+    width: 100%;
+}
+
+:root .redactor-styles p.alt {
+    font-family: 'Reckless Neue', serif !important;
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+}

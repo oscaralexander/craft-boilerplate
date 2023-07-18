@@ -1,0 +1,14 @@
+columnSuffix: yamskseg
+contentColumnType: boolean
+fieldGroup: 4f2903fe-1f6d-4bfa-9f05-56b4c7bc7c8e # Footer
+handle: footerIsShowOpeningHours
+instructions: null
+name: 'Openingstijden tonen?'
+searchable: false
+settings:
+  default: false
+  offLabel: Nee
+  onLabel: Ja
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

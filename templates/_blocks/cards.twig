@@ -1,0 +1,60 @@
+<section class="cards block block--{{ block.textAlignment }} {{ block.theme ? "u-" ~ block.theme.one().slug : "" }}">
+    <div class="wrapper">
+        {% if block.heading or block.intro %}
+            <header class="block__header">
+                <h2 class="block__heading">{{ block.heading }}</h2>
+                <div class="block__intro">{{ block.intro }}</div>
+            </header>
+        {% endif %}
+        <div class="cards__grid">
+            {% for card in block.cards.all() %}
+                <article class="card card--{{ block.cardTextAlignment }} {{ card.theme ? "u-" ~ card.theme.one().slug : "" }}">
+                    <div class="card__flex">
+                        {% set image = card.image.one() %}
+                        {% if image %}
+                            {% if card.ctaUrl %}
+                                <a
+                                    class="card__imageBox {{ card.isImageIcon ? "card__imageBox--icon" : "" }}"
+                                    data-ga-event="card_image_click"
+                                    data-ga-param-card-title="{{ card.heading }}"
+                                    href="{{ card.ctaUrl }}"
+                                >
+                            {% else %}
+                                <div class="card__imageBox {{ card.isImageIcon ? "card__imageBox--icon" : "" }}">
+                            {% endif %}
+                            <img alt="{{ card.heading }}" loading="lazy" src="{{ image.getUrl() }}">
+                            {% if card.ctaUrl %}
+                                </a>
+                            {% else %}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                        <h3 class="card__heading">{{ card.heading }}</h3>
+                        <div class="card__body">{{ card.body }}</div>
+                    </div>
+                    {% if card.ctaText and card.ctaUrl %}
+                        <footer class="card__footer">
+                            {% switch card.ctaType %}
+                                {% case "button" %}
+                                    {% set ctaClassName = "btn" %}
+                                
+                                {% case "button_inverted" %}
+                                    {% set ctaClassName = "btn btn--inverted" %}
+
+                                {% default %}
+                                    {% set ctaClassName = "arrowLink" %}
+                            {% endswitch %}
+                            <a
+                                class="{{ ctaClassName }}"
+                                data-ga-event="card_cta_click"
+                                data-ga-param-card-cta-text="{{ card.ctaText }}"
+                                data-ga-param-card-title="{{ card.heading }}"
+                                href="{{ card.ctaUrl }}"
+                            >{{ card.ctaText }}</a>
+                        </footer>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

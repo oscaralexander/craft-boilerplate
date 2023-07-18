@@ -1,0 +1,19 @@
+columnSuffix: ceenjsfm
+contentColumnType: text
+fieldGroup: 5670711d-a93a-4e98-9710-ef6506090fe4 # Navigatiebalk
+handle: navBarCtaLabel
+instructions: null
+name: 'Knop label'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

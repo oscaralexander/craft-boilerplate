@@ -1,0 +1,20 @@
+:root {
+    /**
+     * Navigation
+     */
+}
+
+@media (min-width: 1024px) {
+    :root {
+    }
+}
+
+$grid-columns: 12 !default;
+
+$screens: (
+    xs: 320px,
+    s: 375px,
+    m: 768px,
+    l: 1024px,
+    xl: 1440px,
+) !default;

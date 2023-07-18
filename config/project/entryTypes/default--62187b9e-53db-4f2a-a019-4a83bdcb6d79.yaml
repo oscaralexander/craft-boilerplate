@@ -45,6 +45,36 @@ fieldLayouts:
         name: Content
         uid: 51ae538f-b4c6-48c6-a9a3-ab142be2c342
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b47a0b4b-511e-4a91-8a53-9a91631dc125 # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc8e7b2b-ed3d-4088-b472-1a2a60489a01
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7b5b569d-b23a-4eeb-a69b-11470ae309bd # Omschrijving
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c8c32bb-880a-4723-a74a-30427fcd2030
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: c6d449d8-b4e8-4031-8f4d-9ea8a0ad04fd
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default

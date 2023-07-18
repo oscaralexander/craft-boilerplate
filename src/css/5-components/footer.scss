@@ -1,0 +1,14 @@
+.footer {
+    background: rgb(var(--color-bg));
+
+    &__socials {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    &__socialsIcon {
+        fill: currentColor;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
