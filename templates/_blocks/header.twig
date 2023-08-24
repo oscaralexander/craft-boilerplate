@@ -1,0 +1,38 @@
+{% set backdrop = block.backdrop.one() %}
+{%
+    set classNames = [
+        "header",
+        backdrop ? "has-backdrop u-transparent" : "",
+        block.isParallax ? "header--parallax equinox js-equinox" : null,
+        block.theme.one() ? "u-" ~ block.theme.one().slug : "u-theme0",
+        "js-reveal",
+    ]
+%}
+<header class="{{ classNames|join(" ") }}" style="--header-height: {{ block.height }}vh;">
+    <div class="header__backdrop" style="opacity: {{ (block.backdropOpacity ?? 100) / 100 }};">
+        {% switch backdrop.kind %}
+            {% case "image" %}
+                <img alt="{{ block.heading }}" src="{{ backdrop.getUrl() }}">
+
+            {% case "video" %}
+                <video autoplay loop muted playsinline>
+                    <source src="{{ backdrop.url }}">
+                </video>
+        {% endswitch %}
+    </div>
+    <div class="wrapper wrapper--narrow">
+        <div class="header__inner">
+            <h1 class="header__heading textSplit js-textSplit">{{ block.heading }}</h1>
+            <div class="header__intro">
+                <div class="richText">
+                    {{ block.intro }}
+                </div>
+            </div>
+            {% include "_partials/ctas" with {
+                center: true,
+                ctas: block.ctas,
+                ga_event: "header_cta_click",
+            } %}
+        </div>
+    </div>
+</header>

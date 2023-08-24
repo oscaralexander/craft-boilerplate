@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: false
 handle: nav
-name: Navigatie
+name: Navigation
 previewTargets:
   -
     __assoc__:
@@ -16,12 +16,12 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  c64df7e3-a993-46f7-9510-fa4ac9bcff1e: # English
+  c64df7e3-a993-46f7-9510-fa4ac9bcff1e: # ไทย
     enabledByDefault: true
     hasUrls: false
     template: null
     uriFormat: null
-  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # Nederlands
+  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # English
     enabledByDefault: true
     hasUrls: false
     template: null

@@ -1,12 +1,6 @@
 :root {
-    /**
-     * Navigation
-     */
-}
-
-@media (min-width: 1024px) {
-    :root {
-    }
+    --nav-height-actual: var(--nav-height);
+    --gutter-actual: calc((100vw - var(--wrapper)) * 0.5);
 }
 
 $grid-columns: 12 !default;
@@ -17,4 +11,18 @@ $screens: (
     m: 768px,
     l: 1024px,
     xl: 1440px,
+) !default;
+
+$spaces: (
+    xxs:    0.125rem, // 2px
+    xs:     0.25rem,  // 4px
+    s:      0.5rem,   // 8px
+    m:      1rem,     // 16px
+    l:      1.5rem,   // 24px
+    xl:     2rem,     // 32px
+    xxl:    3rem,     // 48px
+    3xl:    4rem,     // 64px
+    4xl:    5rem,     // 80px
+    5xl:    6rem,     // 96px
+    6xl:    7rem,     // 112px
 ) !default;

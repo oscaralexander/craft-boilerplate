@@ -42,7 +42,7 @@ fieldLayouts:
                   value: ''
               elementType: craft\elements\Entry
               fieldContext: global
-            fieldUid: 733155d1-0a77-4b75-8aea-c4923a0a8ab4 # Pagina
+            fieldUid: 733155d1-0a77-4b75-8aea-c4923a0a8ab4 # Page
             instructions: null
             label: null
             required: false
@@ -59,7 +59,7 @@ fieldLayouts:
                 -
                   class: craft\fields\conditions\RelationalFieldConditionRule
                   elementId: null
-                  fieldUid: 733155d1-0a77-4b75-8aea-c4923a0a8ab4 # Pagina
+                  fieldUid: 733155d1-0a77-4b75-8aea-c4923a0a8ab4 # Page
                   operator: empty
                   uid: 29e660b0-07b6-43f4-bf16-06bbe449dd2a
               elementType: craft\elements\Entry
@@ -86,7 +86,7 @@ fieldLayouts:
                   value: ''
               elementType: craft\elements\Entry
               fieldContext: global
-            fieldUid: e63aeb12-a3da-49b2-8900-f6ae7c0f68ab # Openen in nieuwe tab?
+            fieldUid: e63aeb12-a3da-49b2-8900-f6ae7c0f68ab # Open in new tab?
             instructions: null
             label: null
             required: false
@@ -102,7 +102,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 7aee0edb-669b-401d-a0ba-26b5b39140e7 # Navigatie
+section: 7aee0edb-669b-401d-a0ba-26b5b39140e7 # Navigation
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

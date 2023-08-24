@@ -1,0 +1,170 @@
+field: 3fff2238-67a0-4baf-afcf-9136097514c6 # Body
+fieldLayouts:
+  7315f239-a1ec-48ae-9b1e-e539b989473b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 632eabb6-347b-439a-9552-d4d975f5ebdd # Theme
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42ba7991-a517-498e-970d-43a75e835391
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2bdbca59-30df-483d-9fa5-b7a441fff742 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d7df5317-4446-4457-a41e-bd135b9325af
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 21f51c18-0b53-46e7-8971-7d3bb55599ac # Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 562a9d57-8225-4d60-8b50-fb75827d0250
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c1768079-56af-44b4-b53c-184d7b923da3 # People
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f74b725c-da64-4d32-bfe6-5173dedea93e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d7b2a403-e961-4a71-9bdc-9613d1dc65d5
+        userCondition: null
+fields:
+  2bdbca59-30df-483d-9fa5-b7a441fff742: # Heading
+    columnSuffix: smfhorbm
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  21f51c18-0b53-46e7-8971-7d3bb55599ac: # Intro
+    columnSuffix: djpaqqnr
+    contentColumnType: text
+    fieldGroup: null
+    handle: intro
+    instructions: null
+    name: Intro
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  632eabb6-347b-439a-9552-d4d975f5ebdd: # Theme
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: theme
+    instructions: null
+    name: Theme
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionLabel: 'Select theme'
+      showSiteMenu: false
+      source: 'group:84abf42b-4f2b-48ba-8f3d-12a0b7cc81d5' # Themes
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  c1768079-56af-44b4-b53c-184d7b923da3: # People
+    columnSuffix: ywjxhefb
+    contentColumnType: string
+    fieldGroup: null
+    handle: people
+    instructions: 'Leave empty to display all entries.'
+    name: People
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Select people'
+      showSiteMenu: false
+      sources:
+        - 'section:ddb6305d-6284-435e-9237-bcfbebdc5bfa' # People
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: people
+name: People
+sortOrder: 9

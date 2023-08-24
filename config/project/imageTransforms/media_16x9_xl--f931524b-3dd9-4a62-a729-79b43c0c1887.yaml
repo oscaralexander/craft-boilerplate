@@ -1,0 +1,11 @@
+fill: null
+format: avif
+handle: media_16x9_xl
+height: 1620
+interlace: none
+mode: crop
+name: 'Media 16:9 XL'
+position: center-center
+quality: null
+upscale: false
+width: 2880

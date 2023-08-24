@@ -1,0 +1,14 @@
+columnSuffix: vuczrzqn
+contentColumnType: boolean
+fieldGroup: 447ca8f2-6915-470d-8b58-f80f05634fa1 # Announcement
+handle: announcementIsVisible
+instructions: null
+name: 'Show announcement?'
+searchable: false
+settings:
+  default: false
+  offLabel: 'No'
+  onLabel: 'Yes'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

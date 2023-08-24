@@ -1,0 +1,50 @@
+columnSuffix: dnasvvju
+contentColumnType: text
+fieldGroup: 4f2903fe-1f6d-4bfa-9f05-56b4c7bc7c8e # Footer
+handle: footerMenu
+instructions: null
+name: Menu
+searchable: false
+settings:
+  addRowLabel: 'Add a link'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Text
+            -
+              - handle
+              - text
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - URL
+            -
+              - handle
+              - url
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults: null
+  maxRows: null
+  minRows: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Table

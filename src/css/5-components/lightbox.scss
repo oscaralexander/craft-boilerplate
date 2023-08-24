@@ -1,0 +1,196 @@
+@keyframes lightboxSpinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lightboxFigcaption {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes lightboxPaginateNextIn {
+    from {
+        transform: translate3d(calc(100% + 1rem), 0, 0);
+    }
+}
+
+@keyframes lightboxPaginateNextOut {
+    to {
+        transform: translate3d(calc(100% + 1rem), 0, 0);
+    }
+}
+
+@keyframes lightboxPaginatePrevIn {
+    from {
+        transform: translate3d(calc(-100% - 1rem), 0, 0);
+    }
+}
+
+@keyframes lightboxPaginatePrevOut {
+    to {
+        transform: translate3d(calc(-100% - 1rem), 0, 0);
+    }
+}
+
+@keyframes lightboxIn {
+    0% {
+        background: rgb(255 255 255 / 0%);
+    }
+
+    100% {
+        background: rgb(255 255 255 / 100%);
+    }
+}
+
+@keyframes lightboxOut {
+    0% {
+        background: rgb(255 255 255 / 100%);
+    }
+
+    100% {
+        background: rgb(255 255 255 / 0%);
+    }
+}
+
+:root {
+    --lightbox-duration: 350ms;
+    --lightbox-easing-func: cubic-bezier(0.5, 0, 0.25, 1);
+}
+
+.js-lightbox {
+    cursor: zoom-in;
+}
+
+.lightboxOverlay {
+    animation: lightboxIn var(--lightbox-duration) var(--lightbox-easing-func) both;
+    background: rgb(255 255 255 / 100%);
+    cursor: zoom-out;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100;
+
+    &.remove {
+        animation: lightboxOut var(--lightbox-duration) var(--lightbox-easing-func) both;
+    }
+}
+
+.lightbox {
+    pointer-events: none;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1200;
+
+    @include screen-min(l) {
+        padding: 1rem;
+    }
+
+    &__figure {
+        background-position: center;
+        background-size: cover;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+
+        figcaption {
+            animation: lightboxFigcaption var(--lightbox-duration) ease both;
+            color: rgb(255 255 255);
+            font-size: var(--font-size-s);
+            bottom: 0;
+            display: none;
+            left: 0;
+            padding: 1rem;
+            position: absolute;
+            z-index: 2;
+
+            .is-animated & {
+                display: block;
+            }
+        }
+
+        img {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &::after {
+            animation: lightboxSpinner 1s infinite linear both;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" opacity=".25" stroke="%23fff" stroke-miterlimit="10" stroke-width="4"/><path d="m24,2c12.15026,0,22,9.84974,22,22,0,6.07513-2.46243,11.57513-6.44365,15.55634" fill="none" stroke="%23fff" stroke-miterlimit="10" stroke-width="4"/></svg>');
+            content: '';
+            display: none;
+            height: 48px;
+            left: calc(50% - 24px);
+            pointer-events: none;
+            position: absolute;
+            top: calc(50% - 24px);
+            width: 48px;
+            z-index: 3;
+        }
+    }
+
+    &.is-loading .lightbox__figure::after {
+        display: block;
+    }
+}
+
+.lightboxPaginateNext,
+.lightboxPaginatePrev {
+    animation: lightboxPaginateNextIn var(--lightbox-duration) var(--lightbox-easing-func) both;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 48px;
+    width: 48px;
+    opacity: 0.5;
+    overflow: hidden;
+    position: fixed;
+    transition: opacity var(--duration-m) ease;
+    top: calc(50% - 24px);
+    z-index: 1300;
+
+    &:focus {
+        outline: var(--focus-outline);
+    }
+
+    &::after {
+        background: rgb(var(--color-text));
+        content: '';
+        inset: 0;
+        -webkit-mask-image: var(--mask-image);
+        -webkit-mask-size: cover;
+        mask-image: var(--mask-image);
+        mask-size: cover;
+        position: absolute;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.lightboxPaginatePrev {
+    --mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polyline points="28.5 13 17.5 24 28.5 35" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1.5"/></svg>');
+    animation-name: lightboxPaginatePrevIn;
+    left: 1rem;
+
+    &.remove {
+        animation: lightboxPaginatePrevOut var(--lightbox-duration) var(--lightbox-easing-func) both;
+    }
+}
+
+.lightboxPaginateNext {
+    --mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polyline points="19.5 13 30.5 24 19.5 35" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1.5"/></svg>');
+    animation-name: lightboxPaginateNextIn;
+    right: 1rem;
+
+    &.remove {
+        animation: lightboxPaginateNextOut var(--lightbox-duration) var(--lightbox-easing-func) both;
+    }
+}

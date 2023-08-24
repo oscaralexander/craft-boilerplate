@@ -6,8 +6,12 @@ export default class Announcement {
         this.$el = $el;
         this.$close = this.$el.querySelector('.js-announcementClose')!;
 
-        document.body.classList.add('has-announcement');
+        if (localStorage.getItem('announcement-hidden') === 'true') {
+            this.$el.remove();
+            return;
+        }
 
+        document.body.classList.add('has-announcement');
         this.initListeners();
     }
 
@@ -15,6 +19,7 @@ export default class Announcement {
         this.$close.addEventListener(
             'click',
             () => {
+                localStorage.setItem('announcement-hidden', 'true');
                 this.$el.style.maxHeight = this.$el.scrollHeight + 'px';
 
                 window.requestAnimationFrame(() => {

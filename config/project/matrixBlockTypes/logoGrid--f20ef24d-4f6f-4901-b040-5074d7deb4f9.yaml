@@ -1,0 +1,291 @@
+field: 3fff2238-67a0-4baf-afcf-9136097514c6 # Body
+fieldLayouts:
+  1c4e12d7-c24a-47e0-a2b1-eb8521ca4a67:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3d755623-5cf3-462a-9a6b-2b29db69e417 # Theme
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e68979e4-59b5-4944-a396-045a23341657
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0b958262-03f2-4d7c-8f21-74c6ca59bc9f # Eyebrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a58253f-69ee-47ed-ad79-1c3601ecede5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0ab92a56-e0a9-41a1-b3da-0a36365f8138 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c9e4534-11c8-44fc-8185-2f08ab3d912c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8919ea71-2a6a-4d35-bc63-9fdc6402f77c # Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d9350cf7-57d6-441d-a9fc-4364dc633f94
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b6ef31c6-caf9-4a92-a447-d32168b10db5 # Columns
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b842274-a658-4b7b-98dc-d5197436dba2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2b568563-b9fe-4c28-a780-b6fa6e6ed592 # Logos
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 952ff320-2aa0-49f1-9c5d-00d88a333c04
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a916cc8d-f351-4be9-b155-429203ee866d
+        userCondition: null
+fields:
+  0ab92a56-e0a9-41a1-b3da-0a36365f8138: # Heading
+    columnSuffix: akqybbem
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  0b958262-03f2-4d7c-8f21-74c6ca59bc9f: # Eyebrow
+    columnSuffix: riofivot
+    contentColumnType: text
+    fieldGroup: null
+    handle: eyebrow
+    instructions: null
+    name: Eyebrow
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  2b568563-b9fe-4c28-a780-b6fa6e6ed592: # Logos
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: logos
+    instructions: null
+    name: Logos
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 671099338
+      columns:
+        __assoc__:
+          -
+            - a2008f68-1f8f-4e26-a9df-6605470d42c0 # Logo
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 0b689d01-9279-4883-8811-927fe6387364 # Company name
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - f13c4c04-cf2a-438e-bf6c-2933871c5ca4 # Company URL
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_11_logos}}'
+      fieldLayout: table
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  3d755623-5cf3-462a-9a6b-2b29db69e417: # Theme
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: theme
+    instructions: null
+    name: Theme
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 0
+      selectionLabel: 'Select theme'
+      showSiteMenu: false
+      source: 'group:84abf42b-4f2b-48ba-8f3d-12a0b7cc81d5' # Themes
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  8919ea71-2a6a-4d35-bc63-9fdc6402f77c: # Intro
+    columnSuffix: hdlqnlld
+    contentColumnType: text
+    fieldGroup: null
+    handle: intro
+    instructions: null
+    name: Intro
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  b6ef31c6-caf9-4a92-a447-d32168b10db5: # Columns
+    columnSuffix: zantdcvh
+    contentColumnType: string
+    fieldGroup: null
+    handle: columns
+    instructions: null
+    name: Columns
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - '8'
+            -
+              - value
+              - '8'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '7'
+            -
+              - value
+              - '7'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '6'
+            -
+              - value
+              - '6'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '5'
+            -
+              - value
+              - '5'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '4'
+            -
+              - value
+              - '4'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: logoGrid
+name: 'Logo grid'
+sortOrder: 11

@@ -1,6 +1,14 @@
 .richText {
     line-height: var(--line-height-l);
 
+    @include screen-max(l) {
+        hyphens: auto;
+    }
+
+    @include screen-min(xl) {
+        font-size: var(--font-size-l);
+    }
+
     a {
         color: currentColor;
         text-decoration: underline;
@@ -8,13 +16,15 @@
 
     figure {
         display: block;
-        margin: 3em calc(var(--gutter) * -1);
+        margin: var(--block-margin) 0;
 
         @include screen-min(l) {
-            img,
-            iframe {
-                border-radius: var(--card-border-radius);
-            }
+            margin: var(--block-margin) calc(var(--gutter) * -1);
+        }
+
+        img,
+        iframe {
+            border-radius: var(--card-border-radius);
         }
 
         iframe {
@@ -27,14 +37,18 @@
         figcaption {
             color: rgb(var(--color-text) / var(--text-alpha-low));
             font-size: var(--font-size-xs);
-            margin: 1rem var(--gutter) 0 var(--gutter);
+            margin-top: 1rem;
+
+            @include screen-min(l) {
+                margin: 1rem var(--gutter) 0 var(--gutter);
+            }
         }
     }
 
     ol,
     p,
     ul {
-        margin-bottom: 1.5em;
+        margin-bottom: 1.25em;
     }
 
     h4 {
@@ -44,7 +58,7 @@
 
     ul {
         list-style: disc;
-        margin-left: 1em;
+        margin-left: 1.25em;
     }
 
     ol,
@@ -58,5 +72,9 @@
         li {
             margin-bottom: 0.5em;
         }
+    }
+
+    & > :last-child {
+        margin-bottom: 0;
     }
 }

@@ -1,0 +1,14 @@
+columnSuffix: croaultx
+contentColumnType: boolean
+fieldGroup: 5030c100-01df-4677-897d-cb82c849dfff # People
+handle: personDisplayName
+instructions: null
+name: 'Display name?'
+searchable: false
+settings:
+  default: true
+  offLabel: 'No'
+  onLabel: 'Yes'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

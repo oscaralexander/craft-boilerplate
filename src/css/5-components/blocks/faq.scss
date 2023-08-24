@@ -1,0 +1,15 @@
+.faq {
+    @include screen-min(l) {
+        .block__header {
+            text-align: left;
+        }
+
+        &__split {
+            display: flex;
+
+            & > * {
+                flex: 0 0 50%;
+            }
+        }
+    }
+}

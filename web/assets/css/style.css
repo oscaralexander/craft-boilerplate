@@ -1,34 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 :root {
+    --ease: cubic-bezier(0.75, 0, 0.175, 1);
+    --gutter: 20px;
+    --wrapper: 1920px;
+    --focus-outline: none;
+    --block-margin: 3rem;
+    --block-padding: 4rem;
+
     --duration-s: 125ms;
     --duration-m: 250ms;
     --duration-l: 500ms;
 
-    --line-height-s: 1.15;
+    --line-height-s: 1.25;
     --line-height-m: 1.3;
     --line-height-l: 1.6;
 
     --font-1: 'Noto Sans', system-ui, sans-serif;
     --font-2: 'Nunito', system-ui, sans-serif;
-    --font-3: 'Inter', system-ui, sans-serif;
+    --font-3: 'Noto Sans', system-ui, sans-serif;
 
-    --font-size-xs: 0.75rem; /* 12px */
-    --font-size-s: 0.875rem; /* 14px */
-    --font-size-m: 1rem; /* 16px */
-    --font-size-l: 1.125rem; /* 18px */
-    --font-size-xl: 1.5rem; /* 20px */
-    --font-size-xxl: 2.5rem; /* 40px */
-    --font-size-3xl: 2.5rem; /* 32px */
+    --font-size-xs: 0.75rem;  /* 12px */
+    --font-size-s: 0.875rem;  /* 14px */
+    --font-size-m: 1rem;      /* 16px */
+    --font-size-l: 1.125rem;  /* 18px */
+    --font-size-xl: 1.25rem;  /* 20px */
+    --font-size-xxl: 1.75rem; /* 28px */
+    --font-size-3xl: 2rem;    /* 32px */
+    --font-size-4xl: 2.5rem;  /* 40px */
 
     --color-bg: 255 255 255;
     --color-bg-tint: 249 246 243;
-    --color-link: 0 51 238;
-    --color-link-hover: 0 67 240;
-    --color-text: 68 0 68;
-    --color-text-muted: 153 153 153;
+    --color-border: 68 0 68 / 10%;
 
-    --gutter: 20px;
+    --bg-color: 255 255 255;
+
+    --text-color: 68 0 68 / 75%;
+    --text-color-hc: 68 0 68;
+    --text-color-lc: 68 0 68 / 50%;
+
+    --link-color: 51 150 105;
+    --link-color-hover: 51 150 105;
+
 
     /**
      * Typography
@@ -36,54 +49,50 @@
     --h1-font: var(--font-2);
     --h1-font-weight: 800;
     --h2-letter-spacing: -0.015em;
-    --h1-line-height: var(--line-height-s);
+    --h1-line-height: 1.25;
     --h1-text-transform: none;
 
     --h2-font: var(--font-2);
+    --h2-font-size: 28px;
     --h2-font-weight: 800;
     --h2-letter-spacing: -0.015em;
-    --h2-line-height: var(--line-height-s);
+    --h2-line-height: 1.25;
     --h2-text-transform: none;
 
     --h3-font: var(--font-2);
     --h3-font-weight: 700;
-    --h2-letter-spacing: -0.015em;
+    --h3-letter-spacing: -0.015em;
     --h3-line-height: var(--line-height-s);
     --h3-text-transform: none;
 
     --h4-font: var(--font-1);
-    --h4-font-weight: 700;
-    --h2-letter-spacing: 0;
-    --h4-line-height: var(--line-height-l);
+    --h4-font-size: 16px;
+    --h4-font-weight: 600;
+    --h4-letter-spacing: 0;
+    --h4-line-height: var(--line-height-m);
     --h4-text-transform: none;
+
+    --h5-font: var(--font-1);
+    --h5-font-size: var(--font-size-s);
+    --h5-font-weight: 500;
+    --h5-letter-spacing: 0.05em;
+    --h5-line-height: var(--line-height-l);
+    --h5-text-transform: uppercase;
 
     --text-alpha-high: 100%;
     --text-alpha-mid: 75%;
     --text-alpha-low: 50%;
 
     /**
-     * Themes
-     */
-    --theme0-bg-color: var(--color-bg);
-    --theme0-text-color: var(--color-text);    
-    --theme1-bg-color: 246 240 220;
-    --theme1-text-color: 68 0 68;
-    --theme2-bg-color: 51 150 105;
-    --theme2-text-color: 255 255 255;
-    --theme3-bg-color: 76 108 185;
-    --theme3-text-color: 255 255 255;
-    --theme4-bg-color: 236 188 214;
-    --theme4-text-color: 68 0 68;
-
-    /**
      * Buttons
      */
     --btn-font: var(--font-1);
     --btn-font-weight: 500;
-    --btn-text-transform: none;
+    --btn-letter-spacing: 0;
     --btn-radius-s: 20px;
     --btn-radius-m: 24px;
     --btn-radius-l: 32px;
+    --btn-text-transform: none;
 
     --btn-bg-color: transparent;
     --btn-bg-color-hover: transparent;
@@ -93,12 +102,13 @@
     --btn-text-color: 51 150 105;
     --btn-text-color-hover: 51 150 105;
 
-    --btn-inverted-bg-color: 255 255 255;
-    --btn-inverted-bg-color-hover: 255 255 255;
-    --btn-inverted-border-color: 255 255 255 / 15%;
-    --btn-inverted-border-color-hover: 255 255 255 / 25%;
-    --btn-inverted-text-color: 68 0 68;
-    --btn-inverted-text-color-hover: 68 0 68;
+    --btn-inverted-bg-color: transparent;
+    --btn-inverted-bg-color-hover: transparent;
+    --btn-inverted-border-color: 255 255 255 / 25%;
+    --btn-inverted-border-color-hover: 255 255 255 / 50%;
+    --btn-inverted-border-width: 1px;
+    --btn-inverted-text-color: 255 255 255;
+    --btn-inverted-text-color-hover: 255 255 255;
 
     --btn-primary-bg-color: 51 150 105;
     --btn-primary-bg-color-hover: 51 150 105;
@@ -107,18 +117,20 @@
     --btn-primary-border-width: 0;
     --btn-primary-text-color: 255 255 255;
     --btn-primary-text-color-hover: 255 255 255;
-    --btn-primary-text-transform: none;
 
-    --btn-border-opacity: 15%;
-    --btn-border-opacity-hover: 25%;
-
-    --easing-func: cubic-bezier(0.66, 0, 0.33, 1);
+    --btn-primary-inverted-bg-color: 255 255 255;
+    --btn-primary-inverted-bg-color-hover: 255 255 255;
+    --btn-primary-inverted-border-color: 255 255 255;
+    --btn-primary-inverted-border-color-hover: 255 255 255;
+    --btn-primary-inverted-border-width: 0;
+    --btn-primary-inverted-text-color: 51 150 105;
+    --btn-primary-inverted-text-color-hover: 51 150 105;
 
     /**
-     * Banner
+     * Announcement
      */
-    --banner-height: 32px;
-    --banner-bg-color: 255, 232, 138;
+    --announcement-height: 32px;
+    --announcement-bg-color: 255, 232, 138;
 
     /**
      * Navigation
@@ -126,55 +138,133 @@
     --nav-bg-color: 255 255 255;
     --nav-border-color: 243 243 243;
     --nav-height: 56px;
-    --nav-link-color: 0 0 0;
-    --nav-link-color-hover: 102 102 102;
+    --nav-logo-height: 32px;
+    --nav-link-color: 68 0 68;
+    --nav-link-color-hover: 68 0 68;
     --nav-link-font: var(--font-1);
     --nav-link-font-size: 1rem;
     --nav-link-font-weight: 500;
     --nav-link-text-transform: none;
     --nav-position: fixed;
-    --nav-submenu-bg-color: 248 248 248;
+    --nav-submenu-bg-color: 255 255 255;
+    --nav-submenu-bg-color-hover: 68 0 68 / 10%;
+    --nav-submenu-border-color: 255 255 255;
     --nav-submenu-border-radius: 3px;
-    --nav-submenu-width: 192px;
-    --nav-submenu-link-color: 0 0 0;
-    --nav-submenu-link-color-hover: 102 102 102;
+    --nav-submenu-box-shadow: 0 0 2px rgb(0 0 0 / 25%);
+    --nav-submenu-link-color: 68 0 68 / 75%;
+    --nav-submenu-link-color-hover: 68 0 68 / 100%;
     --nav-submenu-link-font: var(--font-1);
     --nav-submenu-link-font-size: 1rem;
-    --nav-submenu-link-font-weight: 400;
+    --nav-submenu-link-font-weight: 500;
     --nav-submenu-link-text-transform: none;
+    --nav-submenu-width: 192px;
 
     /**
      * Cards
      */
     --card-bg-color: 246 246 246;
     --card-text-color: var(--color-text);
-    --card-border-radius: 12px;
-}
-
-.u-inverted {
-    --color-bg: 0 0 0;
-    --color-bg-tint: 26 26 26;
-    --color-link: 0 51 238;
-    --color-link-hover: 0 67 240;
-    --color-text: 255 255 255;
-    --color-text-muted: 153 153 153;
+    --card-border-radius: 4px;
 }
 
 @media (min-width: 1024px) {
     :root {
-        --gutter: 48px;
+        --gutter: 7.5vw;
+        --block-margin: 4rem;
+        --block-padding: 15vh;
 
+        --font-size-l: 1.125rem;  /* 18px */
+        --font-size-xl: 1.75rem;  /* 28px */
+        --font-size-xxl: 2rem;    /* 32px */
+        --font-size-3xl: 2.25rem; /* 36px */
+        --font-size-4xl: 4rem;    /* 48px */
+
+        /**
+         * Typography
+         */
+        --h2-font-size: 40px;
+        --h4-font-size: var(--font-size-l);
         --nav-height: 112px;
-        --nav-submenu-box-shadow: 0 0 0 1px rgb(0 0 0 / 15%);
-        --nav-submenu-link-color: 0 0 0;
-        --nav-submenu-link-color-hover: 0 0 0;
+        --nav-logo-height: 56px;
+        
+        /**
+        * Navigation
+        */
+        --nav-submenu-bg-color: 255 255 255;
+        --nav-submenu-bg-color-hover: 68 0 68 / 5%;
     }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --font-size-3xl: 3rem;
+        --font-size-4xl: 4rem;
+    }
+}
+
+/**
+ * Themes
+ */
+
+.u-theme0 {
+    --bg-color: 255 255 255;
+}
+
+.u-theme1 {
+    --bg-color: 246 240 220;
+}
+
+.u-theme2 {
+    --bg-color: 51 150 105;
+}
+
+.u-theme3 {
+    --bg-color: 76 108 185;
+}
+
+.u-theme4 {
+    --bg-color: 236 188 214;
+}
+
+.u-inverted,
+.u-transparent,
+.u-theme2,
+.u-theme3 {
+    --text-color: 255 255 255 / 75%;
+    --text-color-hc: 255 255 255;
+    --text-color-lc: 255 255 255 / 50%;
+
+    --link-color: 255 255 255;
+    --link-color-hover: 255 255 255;
+
+    --btn-bg-color: var(--btn-inverted-bg-color);
+    --btn-bg-color-hover: var(--btn-inverted-bg-color-hover);
+    --btn-border-color: var(--btn-inverted-border-color);
+    --btn-border-color-hover: var(--btn-inverted-border-color-hover);
+    --btn-border-width: var(--btn-inverted-border-width);
+    --btn-text-color: var(--color-text);
+    --btn-text-color-hover: var(--color-text);
+
+    --btn-primary-bg-color: var(--btn-primary-inverted-bg-color);
+    --btn-primary-bg-color-hover: var(--btn-primary-inverted-bg-color-hover);
+    --btn-primary-border-color: var(--btn-primary-inverted-border-color);
+    --btn-primary-border-color-hover: var(--btn-primary-inverted-border-color-hover);
+    --btn-primary-border-width: var(--btn-primary-inverted-border-width);
+    --btn-primary-text-color: var(--bg-color);
+    --btn-primary-text-color-hover: var(--bg-color);
+
+    /**
+     * Navigation
+     */
+    --nav-submenu-bg-color: 255 0 0;
+    --nav-submenu-bg-color-hover: 68 0 68 / 10%;
 }
 
 /**
  * Overrides
  */
 
+ /*
 .block {
     -webkit-mask-image: url('/assets/img/client/block-mask.svg'), linear-gradient(transparent 16px, #000 16px, #000);
     -webkit-mask-repeat: repeat-x, none;
@@ -190,3 +280,4 @@
     -webkit-mask-position: center bottom;
     -webkit-mask-size: 100%;
 }
+*/

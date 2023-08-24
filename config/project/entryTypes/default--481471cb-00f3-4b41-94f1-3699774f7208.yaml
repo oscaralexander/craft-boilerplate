@@ -1,0 +1,135 @@
+fieldLayouts:
+  1b3c0294-b5f9-4673-8368-dd464687e152:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Name
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3f3ab3dc-b45d-4976-abf2-ef69650056f5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5bd28060-568f-4035-bc80-7c8c003ed6cf # Display name?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ccbce67a-2fc8-4a17-ae91-0f8ac2a7e590
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7f5b85ed-1132-4b5b-91bf-dc706b785c75 # Photo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dda8edd4-3d05-41b6-9439-eaca1427614e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a128065c-3302-41f0-8216-69a2a04273b7 # Role
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5453a815-163a-4d79-aaa1-532736d126b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: a128065c-3302-41f0-8216-69a2a04273b7 # Role
+                  operator: notempty
+                  uid: 60ed0e18-02a1-40f3-b228-4a82d20f8acc
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: f7c278db-cdf4-48db-af78-8af4774ed2b8 # Company name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5000c5fd-e037-4d9b-8585-fc6e55bf04e1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: a128065c-3302-41f0-8216-69a2a04273b7 # Role
+                  operator: notempty
+                  uid: fac0da0c-c25c-4cae-8cfb-e7cf2ff7af59
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 918d17e7-dc13-4d18-993c-362eb660776f # Company URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42d1fdaf-7e10-41cf-a85c-3f58762d6d7c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a6c671c9-a57b-4a4b-8e62-5ce213611653 # Bio
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d59e9d82-3e0d-4174-b66c-a9bf587c8138
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: d541607f-83c1-4012-9009-7d2cec22e723
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Standaard
+section: ddb6305d-6284-435e-9237-bcfbebdc5bfa # People
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: none

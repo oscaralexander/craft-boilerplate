@@ -1,0 +1,21 @@
+{% set theme = block.theme.one() %}
+
+<section class="block logoGrid u-{{ theme ? theme.slug : "theme0" }}" style="--cols: {{ block.columns }};">
+    <div class="wrapper wrapper--narrow">
+        <header class="block__header block__header--center">
+            <h2 class="block__heading">{{ block.heading }}</h2>
+            <div class="block__intro">{{ block.intro }}</div>
+        </header>
+    </div>
+    <div class="wrapper">
+        <div class="logoGrid__grid">
+            {% for logo in block.logos %}
+                <div class="logoGrid__col">
+                    {% if logo.companyUrl %}<a href="{{ logo.companyUrl }}" target="_blank">{% endif %}
+                    <img alt="{{ logo.companyName }}" src="{{ logo.logo.one().url }}">
+                    {% if logo.companyUrl %}</a>{% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

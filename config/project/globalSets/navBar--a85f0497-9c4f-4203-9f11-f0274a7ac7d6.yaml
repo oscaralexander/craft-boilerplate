@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 639598a5-664a-4307-a97c-723d11337ab3 # Knop label
+            fieldUid: 639598a5-664a-4307-a97c-723d11337ab3 # CTA button label
             instructions: null
             label: null
             required: false
@@ -18,7 +18,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: c87f9118-55b1-4877-ab20-220c3c67c6b3 # Knop URL
+            fieldUid: c87f9118-55b1-4877-ab20-220c3c67c6b3 # CTA button URL
             instructions: null
             label: null
             required: false
@@ -32,5 +32,5 @@ fieldLayouts:
         uid: 63f40a74-db50-4287-8406-d1f0a5abefff
         userCondition: null
 handle: navBar
-name: Navigatiebalk
+name: 'Navigation bar'
 sortOrder: 4

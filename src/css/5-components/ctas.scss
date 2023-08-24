@@ -1,0 +1,24 @@
+.ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: var(--block-margin);
+    width: 100%;
+
+    &--center {
+        justify-content: center;
+    }
+
+    &--fullWidth {
+        @include screen-max(l) {
+            .btn {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    &:has(.arrowLink) {
+        gap: 1.5rem;
+    }
+}

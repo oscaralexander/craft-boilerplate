@@ -1,0 +1,19 @@
+columnSuffix: mdlnotvp
+contentColumnType: text
+fieldGroup: 4f2903fe-1f6d-4bfa-9f05-56b4c7bc7c8e # Footer
+handle: footerHeading
+instructions: null
+name: Heading
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

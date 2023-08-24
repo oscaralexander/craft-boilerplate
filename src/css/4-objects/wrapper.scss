@@ -1,6 +1,6 @@
 .wrapper {
     margin: auto;
-    max-width: 1600px;
+    max-width: calc(var(--wrapper) + (var(--gutter) * 2));
     padding: 0 var(--gutter);
 
     &--narrow {

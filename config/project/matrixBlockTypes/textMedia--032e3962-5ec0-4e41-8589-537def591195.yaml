@@ -19,6 +19,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: f76704a8-1e0a-452c-b238-06c89c9f99ab # Eyebrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcd47258-75cf-4f90-9fe1-8833d55b8fac
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 0dcac99b-80d8-400f-bdf3-03077ececd2d # Heading
             instructions: null
             label: null
@@ -26,18 +38,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a6675eaf-1a79-425d-80a8-4973f7ac7ce6
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: f76704a8-1e0a-452c-b238-06c89c9f99ab # Intro
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: dcd47258-75cf-4f90-9fe1-8833d55b8fac
             userCondition: null
             warning: null
             width: 100
@@ -67,6 +67,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 7c52c4b9-426b-4e12-bbfc-3fa09b93360e # Media placement
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 228c1db3-b713-458d-b8c9-6708cb3b1066
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 3e8d6aeb-abf5-4da6-af23-c84b3dc8bf34 # Image
             instructions: null
             label: null
@@ -79,13 +91,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 7c52c4b9-426b-4e12-bbfc-3fa09b93360e # Image placement
+            fieldUid: 368a16e6-21f3-4787-9d83-f5dba4cadf05 # Parallax scroll effect?
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 228c1db3-b713-458d-b8c9-6708cb3b1066
+            uid: a5863d07-d0fc-4108-bb4b-5337df3c5636
             userCondition: null
             warning: null
             width: 100
@@ -113,6 +125,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 1f88abed-353d-4126-989e-9c4fe2c19737 # CTAs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1a69b1d-f07a-4e06-bf7e-0c27ecc3d43f
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 53356f3d-f783-4b56-a903-e058f5b09b5f
         userCondition: null
@@ -124,7 +148,7 @@ fields:
     handle: heading
     instructions: null
     name: Heading
-    searchable: false
+    searchable: true
     settings:
       byteLimit: null
       charLimit: null
@@ -137,6 +161,73 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
+  1f88abed-353d-4126-989e-9c4fe2c19737: # CTAs
+    columnSuffix: lbadmcoi
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctas
+    instructions: null
+    name: CTAs
+    searchable: false
+    settings:
+      addRowLabel: 'Add CTA'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Text
+                -
+                  - handle
+                  - text
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - URL
+                -
+                  - handle
+                  - url
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Primary?'
+                -
+                  - handle
+                  - isPrimary
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - lightswitch
+      defaults: null
+      maxRows: null
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Table
   3e8d6aeb-abf5-4da6-af23-c84b3dc8bf34: # Image
     columnSuffix: null
     contentColumnType: string
@@ -149,7 +240,9 @@ fields:
       allowSelfRelations: false
       allowSubfolders: false
       allowUploads: true
-      allowedKinds: null
+      allowedKinds:
+        - image
+        - video
       branchLimit: null
       defaultUploadLocationSource: 'volume:254d3d32-c63f-4944-bb6d-9a5bdac19b4b' # Images
       defaultUploadLocationSubpath: null
@@ -158,7 +251,7 @@ fields:
       maxRelations: 1
       minRelations: 0
       previewMode: full
-      restrictFiles: false
+      restrictFiles: true
       restrictLocation: true
       restrictedDefaultUploadSubpath: null
       restrictedLocationSource: 'volume:254d3d32-c63f-4944-bb6d-9a5bdac19b4b' # Images
@@ -185,13 +278,13 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  7c52c4b9-426b-4e12-bbfc-3fa09b93360e: # Image placement
+  7c52c4b9-426b-4e12-bbfc-3fa09b93360e: # Media placement
     columnSuffix: ncwnwlfp
     contentColumnType: string
     fieldGroup: null
-    handle: imagePlacement
+    handle: mediaPlacement
     instructions: null
-    name: 'Image placement'
+    name: 'Media placement'
     searchable: false
     settings:
       options:
@@ -279,6 +372,21 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Categories
+  368a16e6-21f3-4787-9d83-f5dba4cadf05: # Parallax scroll effect?
+    columnSuffix: jpupxpnz
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: isParallax
+    instructions: 'Enabling this will make the image or embed scroll by at a lower speed, creating a parallax effect.'
+    name: 'Parallax scroll effect?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: 'No'
+      onLabel: 'Yes'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   a7a87b13-087a-425b-81b5-6844975e7ff8: # Text
     columnSuffix: adkijwqt
     contentColumnType: text
@@ -286,7 +394,7 @@ fields:
     handle: text
     instructions: null
     name: Text
-    searchable: false
+    searchable: true
     settings:
       availableTransforms: ''
       availableVolumes:
@@ -374,34 +482,26 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  f76704a8-1e0a-452c-b238-06c89c9f99ab: # Intro
+  f76704a8-1e0a-452c-b238-06c89c9f99ab: # Eyebrow
     columnSuffix: pdsjzbxr
     contentColumnType: text
     fieldGroup: null
-    handle: intro
+    handle: eyebrow
     instructions: null
-    name: Intro
-    searchable: false
+    name: Eyebrow
+    searchable: true
     settings:
-      availableTransforms: ''
-      availableVolumes: '*'
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
-      redactorConfig: Simple.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\redactor\Field
+    translationMethod: none
+    type: craft\fields\PlainText
 handle: textMedia
 name: 'Text & Media'
-sortOrder: 4
+sortOrder: 7

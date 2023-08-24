@@ -1,0 +1,19 @@
+columnSuffix: modgbgom
+contentColumnType: text
+fieldGroup: 447ca8f2-6915-470d-8b58-f80f05634fa1 # Announcement
+handle: announcementUrl
+instructions: null
+name: URL
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

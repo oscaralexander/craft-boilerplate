@@ -1,0 +1,60 @@
+{% set backdrops = block.backdrop.all() %}
+{% set theme = block.theme.one() ? block.theme.one().slug : "theme0" %}
+{% set isTransparent = (block.backdropPlacement == "cover" and theme == "theme0") %}
+{%
+    set classNames = [
+        "block",
+        "hero",
+        "hero--backdrop" ~ block.backdropPlacement|ucfirst,
+        "hero--text" ~ block.textPosition|ucfirst,
+        "u-" ~ theme,
+        isTransparent ? "u-transparent" : "",
+        "equinox js-equinox js-hero",
+    ]
+%}
+<section class="{{ classNames|filter|join(" ") }}">
+    <div class="wrapper">
+        <div class="hero__inner">
+            <div class="hero__backdropsBox" style="--backdrop-dim: {{ 1 - ((block.backdropOpacity ?? 100) / 100) }};">
+                <div class="hero__backdrops js-heroBackdrops">
+                    {% for backdrop in backdrops %}
+                        <div class="hero__backdrop js-heroBackdrop">
+                            {% switch backdrop.kind %}
+                                {% case "image" %}
+                                    <img
+                                        alt=""
+                                        sizes="100vw"
+                                        src="{{ backdrop.url }}"
+                                        srcset="
+                                            {{ backdrop.getUrl("heroXL") }} 2400w
+                                        "
+                                    >
+                                {% case "video" %}
+                                    <video autoplay loop muted playsinline>
+                                        <source src="{{ backdrop.url }}">
+                                    </video>
+                            {% endswitch %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="hero__content">
+                <h1 class="hero__heading textSplit js-textSplit">{{ block.heading }}</h1>
+                <div>
+                    <div class="hero__intro">
+                        <div class="richText">
+                            {{ block.intro }}
+                        </div>
+                    </div>
+                    {% if block.ctas %}
+                        {% include "_partials/ctas" with {
+                            class_name: "arrowLink",
+                            ctas: block.ctas,
+                            ga_event: "hero_cta_click",
+                        } %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

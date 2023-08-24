@@ -6,7 +6,67 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 99c7474b-ffe8-4c89-abeb-7b5be87f6194 # Openingstijden tonen?
+            fieldUid: 366b4e56-aaae-41dc-999c-10ad4176fb40 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba8ba5ba-f69f-4ce0-ac23-b189545103d7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1197e26-7b9b-4ba4-b511-f27bf92fbabf # Opening hours heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 10fe7eab-cf04-4384-9833-0a699b656ea7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 19956c70-f8b1-41a7-8c82-c4f8f1818701 # Contact heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9115fc61-284f-4a3d-b25e-a7ac13439eaa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4a8fa090-274f-45c0-b27a-8c7704c1683b # Menu heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c97fd8b7-9cb0-4b48-aa6e-263aa9393f64
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d7f2654b-1098-4c07-ad3e-0f4293517680 # Menu
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0163e5b-e7dc-436c-a51a-d36a76ff18e9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 99c7474b-ffe8-4c89-abeb-7b5be87f6194 # Show opening hours?
             instructions: null
             label: null
             required: false

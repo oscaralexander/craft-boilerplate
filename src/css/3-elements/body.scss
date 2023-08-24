@@ -1,7 +1,29 @@
 body {
-    color: rgb(var(--color-text));
+    color: rgb(var(--text-color));
     font-family: var(--font-1);
     font-weight: 400;
     min-height: 100vh;
     line-height: var(--line-height-m);
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
 }
+
+// html.lenis {
+//     height: auto;
+// }
+
+// .lenis.lenis-smooth {
+//     scroll-behavior: auto;
+// }
+
+// .lenis.lenis-smooth [data-lenis-prevent] {
+//     overscroll-behavior: contain;
+// }
+
+// .lenis.lenis-stopped {
+//     overflow: hidden;
+// }
+
+// .lenis.lenis-scrolling iframe {
+//     pointer-events: none;
+// }

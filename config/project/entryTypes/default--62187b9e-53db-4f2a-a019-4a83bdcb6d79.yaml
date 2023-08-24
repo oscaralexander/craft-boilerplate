@@ -32,6 +32,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 4b47afd1-259a-4e7b-a05a-22801bc22269 # Transparent navigation bar?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5ff4422-1367-4085-ba4d-0b2ce276ec6a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 3fff2238-67a0-4baf-afcf-9136097514c6 # Body
             instructions: null
             label: null
@@ -78,7 +90,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 78dbc335-db89-40cb-8728-baf565f33afb # Pagina’s
+section: 78dbc335-db89-40cb-8728-baf565f33afb # Pages
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

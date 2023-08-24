@@ -1,0 +1,390 @@
+field: 3fff2238-67a0-4baf-afcf-9136097514c6 # Body
+fieldLayouts:
+  16ed05fc-7d10-4b66-b2ab-24ceff46b272:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6633efba-e52a-488f-a8fc-d3c584516cab # Theme
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b7de193-3e80-4026-8df9-c98a370e0baa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b3c6f90a-04ff-4b82-bbd4-0223bab7446a # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da5816aa-95d1-4fee-b947-34c69be974c3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1c7ecfe4-2e50-4b8b-a894-88d11fff78e6 # Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90ebdd72-ee3f-4333-bd77-988d27d71cb2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c0efc0ac-3d8c-4306-8f1d-1a97068bb0b1 # CTAs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a4c6c6f-90f3-4441-9a93-82a38f93b8c9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6092711c-b7b8-4d47-98d0-a3f1556e2b09 # Text position
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6415d508-fb97-46af-97dd-68a535e5c60b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 25200769-9305-444c-8305-285b71653833 # Backdrop placement
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 690c478c-5ccd-41cd-bb9d-9f3b1ff57207
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0c3df7d0-9148-49cf-bafb-2bd82e8dc608 # Backdrop
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae7ec160-9f06-4c1e-9063-a54a7a5c8ede
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e3e66acf-6fac-4166-9326-16f3ae85a38b # Backdrop opacity?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e531d5bd-d1ef-4f60-a386-5e7710010272
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dbdffb54-30a6-408f-9c89-979c6967c6ac
+        userCondition: null
+fields:
+  0c3df7d0-9148-49cf-bafb-2bd82e8dc608: # Backdrop
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: backdrop
+    instructions: null
+    name: Backdrop
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+        - video
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:254d3d32-c63f-4944-bb6d-9a5bdac19b4b' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:254d3d32-c63f-4944-bb6d-9a5bdac19b4b' # Images
+      restrictedLocationSubpath: hero
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Select backdrop'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  1c7ecfe4-2e50-4b8b-a894-88d11fff78e6: # Intro
+    columnSuffix: yrbowasw
+    contentColumnType: text
+    fieldGroup: null
+    handle: intro
+    instructions: null
+    name: Intro
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  6633efba-e52a-488f-a8fc-d3c584516cab: # Theme
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: theme
+    instructions: null
+    name: Theme
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 0
+      selectionLabel: 'Select theme'
+      showSiteMenu: false
+      source: 'group:84abf42b-4f2b-48ba-8f3d-12a0b7cc81d5' # Themes
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  6092711c-b7b8-4d47-98d0-a3f1556e2b09: # Text position
+    columnSuffix: gydnbuez
+    contentColumnType: string
+    fieldGroup: null
+    handle: textPosition
+    instructions: null
+    name: 'Text position'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Right
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  25200769-9305-444c-8305-285b71653833: # Backdrop placement
+    columnSuffix: ahlwagsm
+    contentColumnType: string
+    fieldGroup: null
+    handle: backdropPlacement
+    instructions: null
+    name: 'Backdrop placement'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Boxed
+            -
+              - value
+              - boxed
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Cover
+            -
+              - value
+              - cover
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  b3c6f90a-04ff-4b82-bbd4-0223bab7446a: # Heading
+    columnSuffix: goryxmdg
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  c0efc0ac-3d8c-4306-8f1d-1a97068bb0b1: # CTAs
+    columnSuffix: uvuidgeh
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctas
+    instructions: null
+    name: CTAs
+    searchable: false
+    settings:
+      addRowLabel: 'Add CTA'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Text
+                -
+                  - handle
+                  - text
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - URL
+                -
+                  - handle
+                  - url
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Primary?'
+                -
+                  - handle
+                  - isPrimary
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - lightswitch
+      defaults: null
+      maxRows: null
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Table
+  e3e66acf-6fac-4166-9326-16f3ae85a38b: # Backdrop opacity?
+    columnSuffix: owezbpme
+    contentColumnType: smallint(3)
+    fieldGroup: null
+    handle: backdropOpacity
+    instructions: null
+    name: 'Backdrop opacity?'
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: 100
+      max: 100
+      min: 0
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: '%'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+handle: hero
+name: Hero
+sortOrder: 1

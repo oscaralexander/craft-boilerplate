@@ -1,4 +1,5 @@
 .btn {
+    backdrop-filter: blur(8px);
     background: rgb(var(--btn-bg-color));
     box-shadow: inset 0 0 0 var(--btn-border-width) rgb(var(--btn-border-color));
     border-radius: var(--btn-radius-m);
@@ -9,9 +10,12 @@
     font-family: var(--btn-font);
     font-weight: var(--btn-font-weight);
     height: 48px;
+    letter-spacing: var(--btn-letter-spacing);
     line-height: 20px;
     padding: 14px 32px;
     text-align: center;
+    text-transform: var(--btn-text-transform);
+    transition: box-shadow var(--duration-m) ease, color var(--duration-m) ease;
     user-select: none;
     white-space: nowrap;
 
@@ -26,27 +30,38 @@
         padding-top: 15px;
     }
 
-    &--inverted {
-        box-shadow: inset 0 0 0 var(--btn-border-width) rgb(var(--btn-inverted-border-color));
-        color: rgb(var(--btn-inverted-text-color));
+    &--block {
+        display: block;
+        width: 100%;
+    }
 
-        &:hover {
-            box-shadow: inset 0 0 0 var(--btn-border-width) rgb(var(--btn-inverted-border-color-hover));
-            color: rgb(var(--btn-inverted-text-color-hover));
-        }
+    &--inverted {
+        --btn-bg-color: var(--btn-inverted-bg-color);
+        --btn-bg-color-hover: var(--btn-inverted-bg-color-hover);
+        --btn-border-color: var(--btn-inverted-border-color);
+        --btn-border-color-hover: var(--btn-inverted-border-color-hover);
+        --btn-border-width: var(--btn-inverted-border-width);
+        --btn-text-color: var(--color-text);
+        --btn-text-color-hover: var(--color-text);
     }
 
     &--primary {
-        background: rgb(var(--btn-primary-bg-color));
-        box-shadow: inset 0 0 0 var(--btn-primary-border-width) rgb(var(--btn-primary-border-color));
-        border: var(--btn-primary-border-width) solid rgb(var(--btn-primary-border-color));
-        color: rgb(var(--btn-primary-text-color));
-        text-transform: var(--btn-primary-text-transform);
+        --btn-bg-color: var(--btn-primary-bg-color);
+        --btn-bg-color-hover: var(--btn-primary-bg-color-hover);
+        --btn-border-color: var(--btn-primary-border-color);
+        --btn-border-color-hover: var(--btn-primary-border-color-hover);
+        --btn-border-width: var(--btn-primary-border-width);
+        --btn-text-color: var(--btn-primary-text-color);
+        --btn-text-color-hover: var(--btn-primary-text-color-hover);
 
-        &:hover {
-            background: rgb(var(--btn-primary-bg-color-hover));
-            box-shadow: inset 0 0 0 var(--btn-primary-border-width) rgb(var(--btn-primary-border-color-hover));
-            color: rgb(var(--btn-primary-text-color-hover));
+        &.btn--inverted {
+            --btn-primary-bg-color: var(--btn-primary-inverted-bg-color);
+            --btn-primary-bg-color-hover: var(--btn-primary-inverted-bg-color-hover);
+            --btn-primary-border-color: var(--btn-primary-inverted-border-color);
+            --btn-primary-border-color-hover: var(--btn-primary-inverted-border-color-hover);
+            --btn-primary-border-width: var(--btn-primary-inverted-border-width);
+            --btn-primary-text-color: var(--color-bg);
+            --btn-primary-text-color-hover: var(--color-bg);
         }
     }
 

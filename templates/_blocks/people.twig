@@ -1,0 +1,43 @@
+{% set theme = block.theme.one() %}
+{% if block.people.all()|length %}
+    {% set people = block.people.all() %}
+{% else %}
+    {% set people = craft.entries.section("people").all() %}
+{% endif %}
+<section class="block people u-{{ theme ? theme.slug : "theme0" }}">
+    <div class="wrapper wrapper--narrow">
+        <header class="block__header block__header--center">
+            <h2 class="block__heading">{{ block.heading }}</h2>
+            <div class="block__intro">{{ block.intro }}</div>
+        </header>
+    </div>
+    <div class="wrapper">
+        <ul class="people__people">
+            {% for person in people %}
+                {% set photo = person.personPhoto.one() %}
+                <li class="person">
+                    {% if photo %}
+                        <img alt="{{ person.title }}" class="person__photo js-lightbox" data-lightbox-caption="{{ person.title }}" data-lightbox-group="people" data-lightbox-src="{{ photo.url }}" data-lightbox-height="{{ photo.height }}" data-lightbox-width="{{ photo.width }}" loading="lazy" src="{{ photo.getUrl('person') }}">
+                    {% endif %}
+                    {% if (person.personDisplayName or person.personRole or person.personCompanyName) %}
+                        <div class="person__text">
+                            {% if person.personDisplayName %}
+                                <h4 class="person__name">{{ person.title }}</h4>
+                            {% endif %}
+                            <div class="person__role">{{ person.personRole }}</div>
+                            {% if person.personCompanyName %}
+                                <div class="person__company">
+                                    {% if person.personCompanyUrl %}
+                                        <a href="{{ person.personCompanyUrl }}" rel="nofollow" target="_blank">{{ person.personCompanyName }}</a>
+                                    {% else %}
+                                        {{ person.personCompanyName }}
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

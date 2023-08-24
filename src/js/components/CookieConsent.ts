@@ -5,26 +5,15 @@ export default class CookieConsent {
 
     constructor($el: HTMLElement) {
         this.$el = $el;
-
         this.$btnAccept = this.$el.querySelector('.js-cookieConsentBtnAccept')!;
-        this.$btnDecline = this.$el.querySelector(
-            '.js-cookieConsentBtnDecline'
-        )!;
+        this.$btnDecline = this.$el.querySelector('.js-cookieConsentBtnDecline')!;
 
         this.initListeners();
     }
 
     initListeners(): void {
-        this.$btnAccept.addEventListener(
-            'click',
-            this.onAccept.bind(this),
-            false
-        );
-        this.$btnDecline.addEventListener(
-            'click',
-            this.onDecline.bind(this),
-            false
-        );
+        this.$btnAccept.addEventListener('click', this.onAccept.bind(this), false);
+        this.$btnDecline.addEventListener('click', this.onDecline.bind(this), false);
         this.$el.addEventListener(
             'animationend',
             () => {

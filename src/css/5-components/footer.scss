@@ -1,14 +1,113 @@
 .footer {
-    background: rgb(var(--color-bg));
+    background: #000;
+    line-height: var(--line-height-l);
+
+    &__top {
+        padding: var(--block-padding) 0;
+
+        @include screen-min(l) {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .footer__col {
+            @include screen-max(l) {
+                margin-top: var(--block-margin);
+            }
+        }
+    }
+
+    &__bottom {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include screen-min(l) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__header {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        grid-column: 1 / 3;
+    }
+
+    &__heading {
+        color: rgb(var(--text-color-hc));
+        font-size: var(--font-size-xxl);
+        line-height: var(--line-height-m);
+        margin-bottom: 1.5em;
+    }
 
     &__socials {
-        display: flex;
-        gap: 0.75rem;
+        color: rgb(var(--text-color-hc));
+        display: inline-flex;
+        gap: 1rem;
+
+        @include screen-min(l) {
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        &:hover {
+            color: rgb(var(--text-color-hc) / 50%);
+        }
     }
 
     &__socialsIcon {
         fill: currentColor;
         height: 1.5rem;
         width: 1.5rem;
+
+        @include screen-min(l) {
+            height: 1.75rem;
+            width: 1.75rem;
+        }
+    }
+
+    a {
+        transition: color var(--duration-m) ease;
+
+        &:hover {
+            color: rgb(var(--text-color-hc));
+        }
+    }
+
+    h5 {
+        margin-bottom: 1rem;
+    }
+
+    &__address {
+        margin-top: 1.5em;
+    }
+
+    &__hours {
+        @include tabular-numbers;
+        margin-top: 1.5em;
+        width: 100%;
+
+        td {
+            width: 50%;
+        }
+    }
+
+    &__bottom {
+        font-size: var(--font-size-xs);
+        padding: 2rem 0;
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: left;
+
+            span {
+                flex: 1;
+            }
+        }
     }
 }

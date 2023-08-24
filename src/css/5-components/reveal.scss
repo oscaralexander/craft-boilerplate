@@ -1,0 +1,13 @@
+@keyframes reveal {
+    to {
+        clip-path: inset(0);
+    }
+}
+
+.reveal {
+    clip-path: inset(0 0 100% 0);
+
+    &.is-reveal {
+        animation: reveal 1s cubic-bezier(0.5, 0, 0.25, 1) both;
+    }
+}

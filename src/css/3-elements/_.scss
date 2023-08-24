@@ -5,6 +5,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-:focus {
-    outline: 3px solid rgb(var(--button-color-bg) / 10%);
+a:focus,
+button:focus {
+    outline: 3px solid rgb(var(--btn-color-bg) / 10%);
 }

@@ -1,0 +1,24 @@
+.simpleText {
+    &__grid {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__col {
+        @include screen-min(l) {
+            padding: 0 var(--gutter) 0 0.5rem;
+            width: 75%;
+        }
+
+        @include screen-min(xl) {
+            width: 50%;
+        }
+    }
+
+    &__text {
+        color: rgb(var(--text-color-hc));
+        font-family: var(--font-3);
+        font-size: var(--font-size-xxl);
+        line-height: var(--line-height-l);
+    }
+}

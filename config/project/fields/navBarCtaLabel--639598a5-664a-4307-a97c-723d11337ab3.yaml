@@ -1,9 +1,9 @@
 columnSuffix: ceenjsfm
 contentColumnType: text
-fieldGroup: 5670711d-a93a-4e98-9710-ef6506090fe4 # Navigatiebalk
+fieldGroup: 5670711d-a93a-4e98-9710-ef6506090fe4 # Navigation bar
 handle: navBarCtaLabel
 instructions: null
-name: 'Knop label'
+name: 'CTA button label'
 searchable: false
 settings:
   byteLimit: null

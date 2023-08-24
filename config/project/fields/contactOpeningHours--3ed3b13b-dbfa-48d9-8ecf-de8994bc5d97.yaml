@@ -3,7 +3,7 @@ contentColumnType: text
 fieldGroup: 1f0cfe39-4ba4-4415-9a88-d4f5dc3f11df # Contact
 handle: contactOpeningHours
 instructions: null
-name: Openingstijden
+name: 'Opening hours'
 searchable: false
 settings:
   addRowLabel: 'Dag toevoegen'
@@ -82,10 +82,10 @@ settings:
           - Maandag
         -
           - col2
-          - '2023-04-24T10:00:00-07:00'
+          - '2023-08-23T19:00:00+02:00'
         -
           - col3
-          - '2023-04-24T18:00:00-07:00'
+          - '2023-08-23T03:00:00+02:00'
         -
           - col4
           - ''
@@ -96,10 +96,10 @@ settings:
           - Dinsdag
         -
           - col2
-          - '2023-04-24T10:00:00-07:00'
+          - '2023-08-23T19:00:00+02:00'
         -
           - col3
-          - '2023-04-24T18:00:00-07:00'
+          - '2023-08-23T03:00:00+02:00'
         -
           - col4
           - ''

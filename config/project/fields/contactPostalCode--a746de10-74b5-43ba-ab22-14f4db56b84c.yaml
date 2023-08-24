@@ -3,7 +3,7 @@ contentColumnType: text
 fieldGroup: 1f0cfe39-4ba4-4415-9a88-d4f5dc3f11df # Contact
 handle: contactPostalCode
 instructions: null
-name: Postcode
+name: 'Postal code'
 searchable: false
 settings:
   byteLimit: null

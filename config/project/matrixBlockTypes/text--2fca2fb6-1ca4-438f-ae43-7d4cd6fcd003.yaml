@@ -19,6 +19,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 3b3101e9-17fd-4d3a-a9ae-34f009753bd5 # Eyebrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dda29f45-da53-4d1c-8030-16aefab72715
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: a649e90b-4a92-4803-8103-bd91e9b552ff # Heading
             instructions: null
             label: null
@@ -26,18 +38,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b6225cf9-c09d-4569-8544-4f65d26f4fc4
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 3b3101e9-17fd-4d3a-a9ae-34f009753bd5 # Intro
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: dda29f45-da53-4d1c-8030-16aefab72715
             userCondition: null
             warning: null
             width: 100
@@ -69,34 +69,26 @@ fieldLayouts:
         uid: 658936bd-59e7-4e2a-9a4f-7811a4e9270d
         userCondition: null
 fields:
-  3b3101e9-17fd-4d3a-a9ae-34f009753bd5: # Intro
+  3b3101e9-17fd-4d3a-a9ae-34f009753bd5: # Eyebrow
     columnSuffix: cloeybje
     contentColumnType: text
     fieldGroup: null
-    handle: intro
+    handle: eyebrow
     instructions: null
-    name: Intro
-    searchable: false
+    name: Eyebrow
+    searchable: true
     settings:
-      availableTransforms: ''
-      availableVolumes: '*'
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: null
-      purifyHtml: true
-      redactorConfig: Simple.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\redactor\Field
+    translationMethod: none
+    type: craft\fields\PlainText
   3fa4ede3-631d-4efb-990a-d342df9724bf: # Text
     columnSuffix: iyiicsqv
     contentColumnType: text
@@ -104,7 +96,7 @@ fields:
     handle: text
     instructions: null
     name: Text
-    searchable: false
+    searchable: true
     settings:
       availableTransforms: ''
       availableVolumes: '*'
@@ -132,7 +124,7 @@ fields:
     handle: heading
     instructions: null
     name: Heading
-    searchable: false
+    searchable: true
     settings:
       byteLimit: null
       charLimit: null
@@ -238,4 +230,4 @@ fields:
     type: craft\fields\Table
 handle: text
 name: Text
-sortOrder: 3
+sortOrder: 6

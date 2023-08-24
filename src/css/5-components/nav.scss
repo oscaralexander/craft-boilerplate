@@ -1,45 +1,136 @@
-@keyframes navSubMenuBox {
-    0% {
-        transform: translate3d(0, -8px, 0);
-    }
-    100% {
+@keyframes navSubMenu {
+    to {
+        opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 }
 
-body {
-    position: relative;
-}
-
 .nav {
-    left: 0;
-    position: fixed;
+    --nav-ease: cubic-bezier(0.5, 0, 0.25, 1);
+    position: sticky;
     top: 0;
-    user-select: none;
-    width: 100%;
-    z-index: 1000;
+    z-index: 100;
+
+    &::after {
+        background-color: rgb(var(--nav-bg-color));
+        box-shadow: 0 0 2px rgb(0 0 0 / 25%);
+        content: '';
+        display: block;
+        position: absolute;
+        transform-origin: top;
+        transition: transform 0.5s ease;
+        inset: 0;
+        z-index: 1;
+    }
+
+    .is-transparentNav & {
+        &::before {
+            background-image: linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(0 0 0 / 5%) 85%, rgb(0 0 0 / 0%));
+            content: '';
+            display: block;
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        @include screen-min(l) {
+            .nav__logo svg *,
+            .wrapper > .nav__menuToggle {
+                // prettier-ignore
+                transition:
+                    background-color 0.5s ease,
+                    border-color 0.5s ease,
+                    color 0.5s ease,
+                    fill 0.5s ease;
+            }
+        }
+
+        @include screen-min(l) {
+            .nav__logo svg *,
+            .nav__menu > .nav__menuItem > .nav__menuLink,
+            .btn,
+            .languageSwitch {
+                // prettier-ignore
+                transition:
+                    background-color 0s 0.5s ease,
+                    border-color 0s 0.5s ease,
+                    color 0s 0.5s ease,
+                    fill 0s 0.5s ease;
+            }
+        }
+    }
+
+    .is-transparentNav &:not(.is-sticky) {
+        &::after {
+            transform: scaleY(0);
+        }
+
+        @include screen-max(l) {
+            .nav__logo svg *,
+            .wrapper > .nav__menuToggle {
+                color: #fff;
+                fill: rgb(255 255 255);
+            }
+        }
+
+        @include screen-min(l) {
+            .nav__logo svg *,
+            .nav__menu > .nav__menuItem > .nav__menuLink,
+            .btn,
+            .languageSwitch {
+                --link-color: 255 255 255;
+                --link-color-hover: 255 255 255;
+                --btn-primary-bg-color: 255 255 255 / 25%;
+                --btn-primary-bg-color-hover: 255 255 255 / 25%;
+                --btn-primary-text-color: 255 255 255;
+                --btn-primary-text-color-hover: 255 255 255;
+                --nav-link-color: 255 255 255;
+                --nav-link-color-hover: 255 255 255;
+                color: #fff;
+                fill: rgb(255 255 255);
+                transition-delay: 0s !important;
+                transition-duration: 0.5s !important;
+            }
+        }
+    }
 
     .wrapper {
+        align-items: center;
+        display: flex;
         height: var(--nav-height);
         position: relative;
+        z-index: 2;
     }
 
-    a,
-    label {
-        outline: none;
-        text-decoration: none;
+    &__logo {
+        .nav--logoCenter & {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        svg {
+            display: block;
+            height: var(--nav-logo-height);
+        }
     }
 
-    &__menuLabel,
     &__menuLink {
         color: rgb(var(--nav-link-color));
+        display: block;
         font-family: var(--nav-link-font);
         font-size: var(--nav-link-font-size);
         font-weight: var(--nav-link-font-weight);
+        position: relative;
         text-transform: var(--nav-link-text-transform);
+
+        &:hover {
+            color: rgb(var(--nav-link-color-hover));
+        }
 
         .nav__subMenu & {
             color: rgb(var(--nav-submenu-link-color));
+            display: block;
             font-family: var(--nav-submenu-link-font);
             font-size: var(--nav-submenu-link-font-size);
             font-weight: var(--nav-submenu-link-font-weight);
@@ -52,39 +143,22 @@ body {
     }
 
     @include screen-max(l) {
-        background: rgb(var(--nav-bg-color));
-
         .wrapper {
-            align-items: center;
-            background: rgb(var(--nav-bg-color));
             display: flex;
             justify-content: center;
         }
 
-        &__overlay {
-            background: rgb(0 0 0 / 25%);
-            inset: var(--nav-height) 0 0 0;
-            opacity: 0;
-            pointer-events: none;
-            position: fixed;
-            transition: opacity var(--duration-m) var(--easing-func);
-            z-index: 1;
-
-            .menuToggle:checked ~ .nav & {
-                opacity: 1;
-                pointer-events: all;
-            }
-        }
-
         &__menuToggle {
-            height: 48px;
             display: flex;
+            height: 48px;
             left: 6px;
             position: absolute;
+            top: calc(50% - 24px);
             width: 48px;
+            z-index: 3;
 
             div {
-                background: rgb(var(--nav-link-color));
+                background-color: currentColor;
                 height: 2px;
                 margin: auto;
                 position: relative;
@@ -93,11 +167,11 @@ body {
 
                 &::before,
                 &::after {
-                    background: rgb(var(--nav-link-color));
+                    background-color: currentColor;
                     content: '';
                     height: 2px;
                     position: absolute;
-                    transition: transform 125ms var(--easing-func), top 125ms 125ms var(--easing-func);
+                    transition: transform 125ms ease, top 125ms 125ms ease;
                     width: 20px;
                 }
 
@@ -110,13 +184,13 @@ body {
                 }
             }
 
-            .menuToggle:checked ~ .nav & {
+            #menuToggle:checked ~ .nav & {
                 div {
-                    background: rgb(var(--nav-link-color) / 0%);
+                    background: transparent;
 
                     &::before,
                     &::after {
-                        transition: transform 125ms 125ms var(--easing-func), top 125ms var(--easing-func);
+                        transition: transform 125ms 125ms ease, top 125ms ease;
                     }
 
                     &::before {
@@ -133,226 +207,166 @@ body {
         }
 
         &__drawer {
-            background: rgb(var(--nav-bg-color));
+            background-color: rgb(var(--nav-bg-color));
+            clip-path: inset(0 100% 0 0);
             display: flex;
             flex-direction: column;
-            inset: var(--nav-height) var(--nav-height) 0 0;
+            height: 100%;
+            inset: 0 10% 0 0;
+            pointer-events: none;
             position: fixed;
-            transform: translate3d(-100vw, 0, 0);
-            transition: transform var(--duration-l) var(--easing-func);
-            z-index: 2;
+            transition: clip-path 0.5s var(--ease);
+            z-index: 4;
 
-            .menuToggle:checked ~ .nav & {
+            #menuToggle:checked ~ .nav & {
+                clip-path: inset(0);
+                pointer-events: all;
+            }
+        }
+
+        &__header {
+            height: var(--nav-height);
+            position: relative;
+        }
+
+        &__menu,
+        &__footer {
+            transform: translate3d(-25%, 0, 0);
+            transition: transform 0.5s var(--ease);
+
+            #menuToggle:checked ~ .nav & {
                 transform: translate3d(0, 0, 0);
             }
         }
 
         &__menu {
-            flex: 1;
-            overflow: auto;
-            opacity: 0;
-            transform: translate3d(-100vw, 0, 0);
-            transition: calc(var(--duration-l) + 100ms) var(--easing-func);
-
-            .menuToggle:checked ~ .nav & {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        &__menuItem {
             border-top: 1px solid rgb(var(--nav-border-color));
-        }
-
-        &__menuItemInner {
-            align-items: center;
-            display: flex;
-            width: 100%;
-
-            .nav__menuLink {
-                flex: 1;
-            }
-        }
-
-        &__subMenuToggle {
-            left: -100px;
-            opacity: 0;
-            position: absolute;
-            top: -100px;
-        }
-
-        &__menuLabel,
-        &__menuLink {
             flex: 1;
-            padding: 1.25rem var(--gutter);
-        }
+            padding-bottom: var(--gutter);
+            overflow: auto;
 
-        &__menuLink {
-            &.has-subMenu {
-                border-right: 1px solid rgb(var(--nav-border-color));
-            }
+            & > .nav__menuItem {
+                border-bottom: 1px solid rgb(var(--nav-border-color));
 
-            .nav__subMenu & {
-                padding-left: calc(var(--gutter) * 2);
-            }
-        }
-
-        &__subMenuToggleLabel {
-            --mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polyline points="14 5 8 11 2 5" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1"/></svg>');
-            background: currentColor;
-            display: block;
-            height: 48px;
-            -webkit-mask-image: var(--mask-image);
-            -webkit-mask-position: center;
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-size: 16px;
-            mask-image: var(--mask-image);
-            mask-position: center;
-            mask-repeat: no-repeat;
-            mask-size: 16px;
-            transition: transform var(--duration-m) var(--easing-func);
-            width: 48px;
-
-            .nav__subMenuToggle:checked ~ .nav__menuItemInner & {
-                transform: rotate(180deg);
-            }
-        }
-
-        &__subMenuBox {
-            background: rgb(var(--nav-submenu-bg-color));
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height var(--duration-m) var(--easing-func);
-        }
-
-        &__subMenu {
-            .nav__menuLink {
-                opacity: 0;
-                transform: translate3d(calc(var(--gutter) * -1), 0, 0);
-                transition: var(--duration-m) var(--easing-func);
-
-                .nav__subMenuToggle:checked ~ .nav__subMenuBox & {
-                    opacity: 1;
-                    transform: translate3d(0, 0, 0);
+                & > .nav__menuLink {
+                    padding: 1rem var(--gutter);
                 }
             }
         }
 
-        &__menuCta,
-        &__menuLanguageSwitch {
-            border-top: 1px solid rgb(var(--nav-border-color));
-            padding: var(--gutter) var(--gutter) 0 var(--gutter);
-        }
+        &__menuLink {
+            &.has-subMenu {
+                &::after {
+                    --mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polyline points="14 5 8 11 2 5" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1.15"/></svg>');
+                    background-color: currentColor;
+                    content: '';
+                    height: 16px;
+                    -webkit-mask-image: var(--mask-image);
+                    -webkit-mask-position: center;
+                    -webkit-mask-repeat: no-repeat;
+                    -webkit-mask-size: 16px;
+                    mask-image: var(--mask-image);
+                    mask-position: center;
+                    mask-repeat: no-repeat;
+                    mask-size: 16px;
+                    pointer-events: none;
+                    position: absolute;
+                    transition: transform 0.5s ease;
+                    right: var(--gutter);
+                    top: calc(50% - 8px);
+                    width: 16px;
+                }
 
-        &__menuCta + &__menuLanguageSwitch {
-            border-top: none;
-            padding-top: calc(var(--gutter) * 0.5);
-        }
-
-        &__right {
-            position: absolute;
-            right: var(--gutter);
-        }
-
-        &__cta,
-        &__languageSwitch {
-            display: none;
-        }
-
-        &__socials {
-            background: rgb(var(--nav-bg-color));
-            border-top: 1px solid rgb(var(--nav-border-color));
-            display: flex;
-            justify-content: space-around;
-            padding: var(--gutter);
-            transition: transform var(--duration-l) var(--duration-l) cubic-bezier(0.66, 0, 0.33, 1);
-            transform: translate3d(0, 100%, 0);
-            width: 100%;
-
-            .menuToggle:checked ~ .nav & {
-                transform: translate3d(0, 0, 0);
+                &[aria-expanded='true']::after {
+                    transform: rotate(180deg);
+                }
             }
         }
 
-        &__socialsLink {
-            display: block;
-            height: 20px;
-            width: 20px;
+        &__subMenu {
+            background: rgb(var(--nav-submenu-bg-color));
+            min-height: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s var(--ease);
 
-            &:hover svg {
-                fill: rgb(var(--nav-link-color-hover));
-                opacity: 1;
+            .nav__menuItem {
+                &:not(:first-child) {
+                    border-top: 1px solid rgb(var(--nav-submenu-border-color));
+                }
+            }
+
+            .nav__menuLink {
+                padding: 1rem var(--gutter) 1rem calc(var(--gutter) * 2);
+            }
+        }
+
+        &__footer {
+            padding: var(--gutter) var(--gutter) 0 var(--gutter);
+            box-shadow: 0 0 var(--gutter) var(--gutter) rgb(var(--nav-bg-color));
+
+            .languageSwitch {
+                margin-top: 0.5rem;
+            }
+        }
+
+        &__socials {
+            border-top: 1px solid rgb(var(--nav-border-color));
+            display: flex;
+            justify-content: space-around;
+            margin: var(--gutter) calc(var(--gutter) * -1) 0 calc(var(--gutter) * -1);
+            padding: var(--gutter);
+            transform: translate3d(0, 100%, 0);
+            transition: transform 0s 0.5s ease-out;
+
+            #menuToggle:checked ~ .nav & {
+                transform: translate3d(0, 0, 0);
+                transition: transform 0.5s 0.5s ease-out;
             }
         }
 
         &__socialsIcon {
             fill: rgb(var(--nav-link-color));
             height: 20px;
-            opacity: 0.5;
             width: 20px;
+        }
+
+        &__right {
+            display: none;
+        }
+
+        &__overlay {
+            background: rgb(0 0 0 / 50%);
+            inset: 0;
+            opacity: 0;
+            pointer-events: none;
+            position: fixed;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+
+            .menuToggle:checked ~ .nav & {
+                opacity: 1;
+                pointer-events: all;
+            }
         }
     }
 
     @include screen-min(l) {
-        background: rgb(var(--nav-bg-color));
-        position: absolute;
-        transition: var(--duration-m) ease-in-out;
-        position: sticky;
-        top: 0;
+        transition: transform 0.5s ease;
+        transform: translate3d(0, 0, 0);
 
-        .has-announcement & {
-            top: calc(var(--banner-height) * -1);
-        }
-
-        .is-visualHeader &:not(.has-scrolled) {
-            background: rgb(var(--nav-bg-color) / 0%);
-            color: rgb(255 255 255);
-
-            .btn {
-                background: rgb(var(--btn-inverted-bg-color));
-                color: rgb(var(--btn-inverted-text-color));
-
-                &:hover {
-                    background: rgb(var(--btn-inverted-bg-color-hover));
-                    color: rgb(var(--btn-inverted-text-color-hover));
-                }
-            }
-        }
-
-        .wrapper {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 var(--gutter);
-        }
-
-        &.has-scrolled {
-            box-shadow: none;
-            transition: transform var(--duration-m) 0ms ease-in-out;
+        &.is-sticky:not(.is-scrollingUp) {
             transform: translate3d(0, -100%, 0);
-        }
 
-        &.is-scrollingUp {
-            transform: translate3d(0, 0, 0);
-        }
-
-        &__logo {
-            position: absolute;
-
-            .nav--logoCenter & {
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%, 0);
-            }
-
-            .nav--logoLeft & {
-                left: var(--gutter);
+            &::after {
+                box-shadow: 0 0 0 rgb(0 0 0 / 0);
             }
         }
 
         &__drawer {
             display: flex;
             flex: 1;
+            min-width: 0;
             justify-content: center;
 
             .nav--logoCenter & {
@@ -360,60 +374,49 @@ body {
             }
         }
 
+        &__header,
+        &__footer {
+            display: none;
+        }
+
         &__menu {
-            display: flex;
+            display: inline-flex;
+            justify-content: center;
             gap: 1.5rem;
 
-            .nav--logoLeft & {
-                justify-content: center;
+            .nav--logoCenter & {
+                justify-content: flex-start;
             }
 
             &:hover {
-                & > .nav__menuItem:not(:hover) {
-                    .nav__menuLabel,
-                    .nav__menuLink {
-                        opacity: 0.5;
-                    }
+                & > .nav__menuItem {
+                    opacity: 0.5;
                 }
             }
         }
 
-        &__menuCta,
-        &__menuLanguageSwitch,
-        &__subMenuToggle {
-            display: none;
-        }
-
-        &__subMenuBox {
-            max-height: none !important;
-        }
-
         &__menuItem {
-            &:hover,
-            &:focus-within {
-                .nav__subMenuBox {
+            transition: opacity 0.5s ease;
+            position: relative;
+            white-space: nowrap;
+
+            &:hover {
+                opacity: 1 !important;
+
+                .nav__subMenu {
                     display: block;
                 }
             }
         }
 
-        &__menuLink,
-        &__menuLabel {
-            color: currentColor;
-            display: block;
-            padding: 1rem 0;
-            position: relative;
-            transition: opacity var(--duration-m) ease;
-
-            &:hover {
-                color: currentColor;
-            }
+        &__menuLink {
+            padding: 0.5rem 0;
 
             &.has-subMenu {
                 padding-right: 1.25em;
 
                 &::after {
-                    --mask-image: url('data:image/svg+xml;utf,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><polyline points="11 3.5 6 8.5 1 3.5" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1"/></svg>');
+                    --mask-image: url('data:image/svg+xml;utf,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><polyline points="11 3.5 6 8.5 1 3.5" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1.15"/></svg>');
                     content: '';
                     background: currentColor;
                     display: block;
@@ -428,51 +431,34 @@ body {
             }
         }
 
-        &__menuItem {
-            position: relative;
-        }
-
-        &__subMenuBox {
-            animation: navSubMenuBox var(--duration-m) ease-out;
-            background: #fff;
-            border-radius: var(--nav-submenu-border-radius);
+        &__subMenu {
+            animation: navSubMenu var(--duration-m) ease-out both;
+            background-color: rgb(var(--nav-submenu-bg-color));
             box-shadow: var(--nav-submenu-box-shadow);
+            border-radius: var(--card-border-radius);
             display: none;
-            left: -1.5rem;
+            left: -1rem;
+            line-height: var(--line-height-l);
+            opacity: 0;
             padding: 0.5rem 0;
             position: absolute;
+            transform: translate3d(0, -8px, 0);
             width: var(--nav-submenu-width);
-        }
 
-        &__subMenuToggleInput,
-        &__subMenuToggleLabel {
-            @include screen-min(l) {
-                display: none;
-            }
-        }
-
-        &__subMenu {
             .nav__menuLink {
-                line-height: var(--line-height-l);
-                padding: 0.75rem 1.5rem;
+                background-color: rgb(var(--nav-submenu-bg-color));
+                display: block;
+                padding: 0.5rem 1rem;
                 transition: var(--duration-m) ease;
 
-                &:hover,
-                &:focus {
-                    background: rgb(var(--nav-submenu-bg-color));
+                &:hover {
+                    background-color: rgb(var(--nav-submenu-bg-color-hover));
                 }
             }
         }
 
-        &__socials {
-            display: none;
-        }
-
         &__right {
-            align-items: center;
             display: flex;
-            position: absolute;
-            right: var(--gutter);
             gap: 0.5rem;
         }
     }

@@ -1,0 +1,35 @@
+.logoGrid {
+    --cols: 6;
+
+    &__grid {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -0.5rem;
+
+        @include screen-min(l) {
+            margin: -1rem;
+        }
+    }
+
+    &__col {
+        align-items: center;
+        display: flex;
+        flex: 0 0 50%;
+        justify-content: center;
+        padding: 0.5rem;
+
+        @include screen-min(l) {
+            flex: 0 0 calc(100% / var(--cols));
+            padding: 1rem;
+        }
+
+        img {
+            margin: auto;
+            max-height: 96px;
+            -webkit-mix-blend-mode: multiply;
+            mix-blend-mode: multiply;
+        }
+    }
+}

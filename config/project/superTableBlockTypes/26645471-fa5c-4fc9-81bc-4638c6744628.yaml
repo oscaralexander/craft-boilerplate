@@ -1,0 +1,137 @@
+changedFieldIndicator: 1462963807
+field: 2b568563-b9fe-4c28-a780-b6fa6e6ed592 # Logos
+fieldLayouts:
+  3efa769d-847e-42b1-9449-2e1a8b79f149:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a2008f68-1f8f-4e26-a9df-6605470d42c0 # Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0aca0e15-ae0e-428f-985d-4df8c014f0ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0b689d01-9279-4883-8811-927fe6387364 # Company name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b3f753f9-f08a-4a93-80dd-ce3c62d1efa2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f13c4c04-cf2a-438e-bf6c-2933871c5ca4 # Company URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: adfd9b3c-0d91-4b1f-b9f0-e75fd697b8d4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dbf162b7-ef0c-457c-bc3a-545b4fd8aff1
+        userCondition: null
+fields:
+  0b689d01-9279-4883-8811-927fe6387364: # Company name
+    columnSuffix: efmmrwkc
+    contentColumnType: text
+    fieldGroup: null
+    handle: companyName
+    instructions: null
+    name: 'Company name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a2008f68-1f8f-4e26-a9df-6605470d42c0: # Logo
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: logo
+    instructions: null
+    name: Logo
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:254d3d32-c63f-4944-bb6d-9a5bdac19b4b' # Images
+      defaultUploadLocationSubpath: logos
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:254d3d32-c63f-4944-bb6d-9a5bdac19b4b' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Select logo'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:254d3d32-c63f-4944-bb6d-9a5bdac19b4b' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  f13c4c04-cf2a-438e-bf6c-2933871c5ca4: # Company URL
+    columnSuffix: kgpnkhdd
+    contentColumnType: text
+    fieldGroup: null
+    handle: companyUrl
+    instructions: null
+    name: 'Company URL'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

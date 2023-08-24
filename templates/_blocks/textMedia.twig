@@ -1,26 +1,58 @@
-<section class="textMedia textMedia--image{{ block.imagePlacement|ucfirst }} textMedia--text{{ block.textPosition|ucfirst }} block {{ block.theme.one() ? "u-" ~ block.theme.one().slug : "" }}">
+{% set image = block.image.one() %}
+{%
+    set classNames = [
+        "block",
+        "textMedia",
+        "textMedia--" ~ (image ? "image" : "embed"),
+        "textMedia--media" ~ block.mediaPlacement|ucfirst,
+        "textMedia--text" ~ block.textPosition|ucfirst,
+        block.isParallax ? "textMedia--parallax equinox js-equinox" : null,
+        block.theme.one() ? "u-" ~ block.theme.one().slug : "u-theme0",
+    ]
+%}
+<section class="{{ classNames|filter|join(" ") }}">
     <div class="wrapper">
+        <header class="block__header block__header--center">
+            <h5 class="block__eyebrow">{{ block.eyebrow }}</h5>
+            <h2 class="block__heading">{{ block.heading }}</h2>
+        </header>
         <div class="textMedia__split">
-            <div class="textMedia__text">
-                <header class="block__header">
-                    <h2 class="block__heading">{{ block.heading }}</h2>
-                    <div class="block__intro">{{ block.intro }}</div>
-                </header>
-                <div class="text__body richText">
-                    {{ block.text|replace("<img", "<img loading=\"lazy\"")|raw }}
+            <div class="textMedia__media">
+                <div class="textMedia__mediaBox">
+                    {% if image %}
+                        <img
+                            alt="{{ block.heading }}"
+                            height="{{ image.height }}"
+                            loading="lazy"
+                            src="{{ image.getUrl() }}"
+                            style="aspect-ratio: {{ image.width ~ "/" ~ image.height }};"
+                            width="{{ image.width }}"
+                        >
+                    {% else %}
+                        {% if block.embedHtml %}
+                            <div class="textMedia__embed textMedia__embed--{{ block.embedAspectRatio}}">
+                                {{ block.embedHtml|raw }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
                 </div>
             </div>
-            <div class="textMedia__media">
-                {% set image = block.image.one() %}
-                {% if image %}
-                    <img alt="{{ block.heading }}" loading="lazy" src="{{ image.getUrl() }}">
-                {% else %}
-                    {% if block.embedHtml %}
-                        <div class="textMedia__embed textMedia__embed--{{ block.embedAspectRatio}}">
-                            {{ block.embedHtml|raw }}
-                        </div>
-                    {% endif %}
-                {% endif %}
+            <div class="textMedia__text">
+                <div class="textMedia__textWrapper">
+                    <header class="block__header block__header--center">
+                        <h5 class="block__eyebrow">{{ block.eyebrow }}</h5>
+                        <h2 class="block__heading">{{ block.heading }}</h2>
+                        <div class="block__intro">{{ block.intro }}</div>
+                    </header>
+                    <div class="textMedia__body richText">
+                        {{ block.text|replace("<img", "<img loading=\"lazy\"")|raw }}
+                    </div>
+                    {% include "_partials/ctas" with {
+                        center: true,
+                        ctas: block.ctas,
+                        ga_event: "text_media_cta_click",
+                    } %}
+                </div>
             </div>
         </div>
     </div>

@@ -1,23 +1,18 @@
-<section class="text block {{ block.theme.one() ? "u-" ~ block.theme.one().slug : "" }}">
+{% set theme = block.theme.one() %}
+<section class="text block u-{{ theme ? theme.slug : "theme0" }}">
     <div class="wrapper wrapper--narrow">
-        <header class="block__header">
+        <header class="block__header block__header--center">
+            <h5 class="block__eyebrow">{{ block.eyebrow }}</h5>
             <h2 class="block__heading">{{ block.heading }}</h2>
-            <div class="block__intro">{{ block.intro }}</div>
         </header>
         <div class="text__body richText">
             {{ block.text|replace("<img", "<img loading=\"lazy\"")|raw }}
         </div>
-        {% if block.ctas|length %}
-            <div class="text__ctas">
-                {% for cta in block.ctas %}
-                    <a
-                        class="btn {{ cta.isPrimary ? "btn--primary" : "" }}"
-                        data-ga-event="text_cta_click"
-                        data-ga-param-cta-text="{{ cta.text }}"
-                        href="{{ cta.url }}"
-                    >{{ cta.text }}</a>
-                {% endfor %}
-            </div>
-        {% endif %}
+        {% include "_partials/ctas" with {
+            center: true,
+            ctas: block.ctas,
+            fullWidth: true,
+            ga_event: "text_cta_click",
+        } %}
     </div>
 </section>

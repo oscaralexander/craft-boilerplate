@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigatie
+fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigation
 handle: navPage
 instructions: 'Selecteer de pagina waar dit item naar moet verwijzen. Is er geen interne pagina, vul dan bij het volgende veld de URL in waar dit item naar moet verwijzen.'
-name: Pagina
+name: Page
 searchable: false
 settings:
   allowSelfRelations: false
@@ -26,7 +26,7 @@ settings:
   selectionLabel: 'Selecteer pagina'
   showSiteMenu: true
   sources:
-    - 'section:78dbc335-db89-40cb-8728-baf565f33afb' # Pagina’s
+    - 'section:78dbc335-db89-40cb-8728-baf565f33afb' # Pages
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

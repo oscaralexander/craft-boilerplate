@@ -29,6 +29,11 @@
     "customstyles",
     "fullscreen"
   ],
+  "imagePosition": {
+    "left": "image-left",
+    "right": "image-right",
+    "center": "image-center"
+  },
   "linkNewTab": true,
   "toolbarFixed": true
 }

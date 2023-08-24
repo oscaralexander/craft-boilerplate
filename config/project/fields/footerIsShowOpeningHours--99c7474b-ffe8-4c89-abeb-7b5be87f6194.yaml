@@ -3,7 +3,7 @@ contentColumnType: boolean
 fieldGroup: 4f2903fe-1f6d-4bfa-9f05-56b4c7bc7c8e # Footer
 handle: footerIsShowOpeningHours
 instructions: null
-name: 'Openingstijden tonen?'
+name: 'Show opening hours?'
 searchable: false
 settings:
   default: false

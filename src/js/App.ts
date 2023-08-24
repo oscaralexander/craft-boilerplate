@@ -2,6 +2,7 @@ type AppBinding = {
     component: AppComponent;
     name: string;
     options?: AppOptions;
+    selector?: string;
 };
 
 type AppComponent = new (...args: any[]) => unknown;
@@ -16,19 +17,21 @@ export default class App {
         this.init();
     }
 
-    bind($root: Document | HTMLElement, name: string, component: AppComponent, options: AppOptions): void {
-        $root.querySelectorAll(`.js-${name}`).forEach(($el) => {
+    bind($root: Document | HTMLElement, binding: AppBinding): void {
+        const selector = binding.selector ?? `.js-${binding.name}`;
+
+        $root.querySelectorAll(selector).forEach(($el) => {
             $el.__APP__ ||= {};
 
-            if ($el.__APP__[name] === undefined) {
-                $el.__APP__[name] = new component($el, options);
+            if ($el.__APP__[binding.name] === undefined) {
+                $el.__APP__[binding.name] = new binding.component($el, binding.options ?? {});
             }
         });
     }
 
     bindAll($root: Document | HTMLElement): void {
         this.bindings.forEach((binding) => {
-            this.bind($root, binding.name, binding.component, binding.options || {});
+            this.bind($root, binding);
         });
     }
 

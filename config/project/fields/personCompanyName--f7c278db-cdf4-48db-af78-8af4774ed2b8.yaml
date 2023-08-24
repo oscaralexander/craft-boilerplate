@@ -1,0 +1,19 @@
+columnSuffix: epekaddp
+contentColumnType: text
+fieldGroup: 5030c100-01df-4677-897d-cb82c849dfff # People
+handle: personCompanyName
+instructions: null
+name: 'Company name'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

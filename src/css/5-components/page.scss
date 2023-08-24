@@ -4,7 +4,11 @@
     min-height: 100vh;
 
     @include screen-max(l) {
-        padding-top: var(--nav-height);
+        // padding-top: var(--nav-height);
+    }
+
+    .is-transparentNav & {
+        margin-top: calc(var(--nav-height) * -1);
     }
 
     &__main {

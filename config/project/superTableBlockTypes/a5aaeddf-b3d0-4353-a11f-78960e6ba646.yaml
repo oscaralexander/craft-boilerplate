@@ -1,4 +1,4 @@
-changedFieldIndicator: 1753358193
+changedFieldIndicator: 726320264
 field: dd5eba1d-3305-4fe7-bdc6-8127d16350e6 # Cards
 fieldLayouts:
   30dec771-ecf7-49e0-8ef6-d37db66fd76b:
@@ -8,6 +8,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 4d8bbcc7-d9f8-4612-a192-de525fbcf941 # Theme
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb4e88a9-5d76-4b74-bbbf-4ba6efb68a34
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 59d081d5-cd03-43df-bbd6-e234b893d957 # Image
             instructions: null
             label: null
@@ -15,6 +27,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 49c6a1e1-3c65-4eb6-91b5-863596deba01
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ef529d54-8ff7-4751-a83d-dbcb01b23595 # Image position
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 89c97079-fb37-4ee9-a404-2cdddcefee66
             userCondition: null
             warning: null
             width: 100
@@ -92,13 +116,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 4d8bbcc7-d9f8-4612-a192-de525fbcf941 # Theme
+            fieldUid: 3206bc0e-c660-4d6c-ade9-a6d4885041be # Text alignment
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cb4e88a9-5d76-4b74-bbbf-4ba6efb68a34
+            uid: ed7144b6-5e42-4691-b552-80baec2e3cd7
             userCondition: null
             warning: null
             width: 100
@@ -279,6 +303,41 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+  3206bc0e-c660-4d6c-ade9-a6d4885041be: # Text alignment
+    columnSuffix: mzwfsomh
+    contentColumnType: string
+    fieldGroup: null
+    handle: textAlignment
+    instructions: null
+    name: 'Text alignment'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   a6a4b4c6-b08f-4905-8cc9-a11a097049ed: # Body
     columnSuffix: hxvltaae
     contentColumnType: text
@@ -327,3 +386,38 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
+  ef529d54-8ff7-4751-a83d-dbcb01b23595: # Image position
+    columnSuffix: sltwxglv
+    contentColumnType: string
+    fieldGroup: null
+    handle: imagePosition
+    instructions: null
+    name: 'Image position'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Top
+            -
+              - value
+              - top
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Bottom
+            -
+              - value
+              - bottom
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown

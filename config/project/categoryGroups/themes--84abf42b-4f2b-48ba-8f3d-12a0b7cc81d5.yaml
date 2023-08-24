@@ -37,11 +37,11 @@ fieldLayouts:
 handle: themes
 name: Themes
 siteSettings:
-  c64df7e3-a993-46f7-9510-fa4ac9bcff1e: # English
+  c64df7e3-a993-46f7-9510-fa4ac9bcff1e: # ไทย
     hasUrls: true
     template: null
     uriFormat: 'themes/{slug}'
-  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # Nederlands
+  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # English
     hasUrls: true
     template: null
     uriFormat: 'themes/{slug}'

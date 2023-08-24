@@ -1,0 +1,19 @@
+{% set theme = block.theme.one() %}
+<section class="block simpleText u-{{ theme ? theme.slug : "theme0" }}">
+    <div class="wrapper">
+        <div class="simpleText__grid">
+            <div class="simpleText__col">
+                <div class="simpleText__text">
+                    {{ block.text }}
+                </div>
+                {% if block.ctas|length %}
+                    <div class="ctas">
+                        {% for cta in block.ctas %}
+                            <a class="arrowLink" href="{{ cta.url }}">{{ cta.text }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

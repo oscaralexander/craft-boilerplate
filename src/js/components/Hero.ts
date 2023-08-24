@@ -1,87 +1,87 @@
 import gsap from 'gsap';
 
 export default class Hero {
+    $$backdrops: NodeListOf<HTMLElement>;
     $el: HTMLElement;
-    $$images: NodeListOf<HTMLElement>;
-    $images: HTMLElement;
-    currentImageIndex: number;
-    numImages: number;
+    $backdrops: HTMLElement;
+    interval: number | null;
+    numBackdrops: number;
+    timeout: number | null;
 
     constructor($el: HTMLElement) {
         this.$el = $el;
+        this.$$backdrops = this.$el.querySelectorAll('.js-heroBackdrop');
+        this.$backdrops = this.$el.querySelector('.js-heroBackdrops')!;
+        this.interval = null;
+        this.numBackdrops = this.$$backdrops.length;
+        this.timeout = +(this.$el.dataset.heroTimeout ?? 5000);
 
-        this.$$images = this.$el.querySelectorAll('.js-heroImage');
-        this.$images = this.$el.querySelector('.js-heroImages')!;
-        this.currentImageIndex = 0;
-        this.isInteracted = false;
-        this.numImages = this.$$images.length;
+        // Set loaded state when top image is loaded
+        const $lastBackdropImg = this.$backdrops.querySelector('.js-heroBackdrop:last-child img');
 
-        console.log(this.numImages);
-
-        this.initListeners();
-    }
-
-    getElementByIndexAttr($$elements: NodeListOf<HTMLElement>, index: number): HTMLElement | undefined {
-        const $el = Array.from($$elements).find(($el) => {
-            const i: number | null = Number($el.dataset.index ?? null);
-
-            if (i !== null) {
-                return i === index;
+        if ($lastBackdropImg instanceof HTMLImageElement) {
+            if ($lastBackdropImg.complete) {
+                this.$el.classList.add('is-loaded');
             }
 
-            return false;
-        });
-
-        return $el;
-    }
-
-    initListeners(): void {}
-
-    showImage(index: number): void {
-        if (index === this.currentImageIndex) return;
-
-        const $image = this.$images.querySelector(`[data-index="${index}"]`);
-        // const $nextImageBullet = this.getElementByIndexAttr(this.$$caseNavItems, index);
-
-        // Deactivate all nav items
-        // this.$$nextImageBullets.forEach(($nextImageBullet) => $caseNavItem.classList.remove('is-active'));
-
-        // Active next nav item
-        // if ($nextNavItem) {
-        //     $nextNavItem.classList.add('is-active');
-        // }
-
-        // Animate images
-        if ($image) {
-            this.$images.append($image);
-
-            gsap.fromTo(
-                this.$images,
-                {
-                    '--progress-in': 1,
-                    '--progress-out': 0,
-                },
-                {
-                    '--progress-in': 0,
-                    '--progress-out': 1,
-                    duration: 0.75,
-                    ease: 'power2.inOut',
-                }
-            );
+            $lastBackdropImg.onload = () => {
+                this.$el.classList.add('is-loaded');
+            };
+        } else {
+            this.$el.classList.add('is-loaded');
         }
 
-        this.currentImageIndex = index;
+        // Set event listeners
+        this.initListeners();
+
+        // Go! 🚀
+        this.start();
     }
 
-    /**
-     * Getters & setters
-     */
+    initListeners(): void {
+        this.$el.addEventListener(
+            'equinox:toggle',
+            ((e: CustomEvent) => {
+                if (e.detail.isVisible) {
+                    this.start();
+                } else {
+                    this.stop();
+                }
+            }) as EventListener,
+            false
+        );
 
-    get isInteracted(): boolean {
-        return this.$el.classList.contains('is-interacted');
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                this.start();
+            } else {
+                this.stop();
+            }
+        });
     }
 
-    set isInteracted(isInteracted: boolean) {
-        this.$el.classList.toggle('is-interacted', isInteracted);
+    showNext(): void {
+        const $first = this.$backdrops.querySelector('.js-heroBackdrop');
+
+        if ($first instanceof HTMLElement) {
+            if (!this.$el.classList.contains('is-animating')) {
+                this.$el.classList.add('is-animating');
+            }
+
+            this.$backdrops.appendChild($first);
+        }
+    }
+
+    start(): void {
+        if (this.interval === null && this.timeout && this.numBackdrops > 1) {
+            this.interval = setInterval(this.showNext.bind(this), this.timeout);
+        }
+    }
+
+    stop(): void {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
     }
 }

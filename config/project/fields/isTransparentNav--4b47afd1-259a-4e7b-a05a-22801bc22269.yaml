@@ -1,0 +1,14 @@
+columnSuffix: fnnslznr
+contentColumnType: boolean
+fieldGroup: 2ebb5a76-a5d5-44d5-83bc-e7819735dea9 # Pages
+handle: isTransparentNav
+instructions: null
+name: 'Transparent navigation bar?'
+searchable: false
+settings:
+  default: false
+  offLabel: 'No'
+  onLabel: 'Yes'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

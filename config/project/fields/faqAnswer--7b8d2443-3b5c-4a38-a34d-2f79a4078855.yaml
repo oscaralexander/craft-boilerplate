@@ -1,9 +1,9 @@
 columnSuffix: yiddhdmm
 contentColumnType: text
-fieldGroup: 9b2fcfef-966a-47e6-ba58-705f09ff1135 # Veelgestelde vragen
+fieldGroup: 9b2fcfef-966a-47e6-ba58-705f09ff1135 # FAQ
 handle: faqAnswer
 instructions: null
-name: Antwoord
+name: Answer
 searchable: false
 settings:
   availableTransforms: ''

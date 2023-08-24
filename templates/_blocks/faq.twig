@@ -1,0 +1,49 @@
+{% if block.faqs.all()|length %}
+    {% set faqs = block.questions.all() %}
+{% else %}
+    {% set faqs = craft.entries.section("faq").all() %}
+{% endif %}
+{% set schema = [] %}
+{% for faq in faqs %}
+    {%
+        set schema = schema|merge([{
+            "@type": "Question",
+            "name": faq.title,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.faqAnswer
+            }
+        }])
+    %}
+{% endfor %}
+<section class="block faq {{ block.theme.one() ? "u-" ~ block.theme.one().slug : "" }}">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": {{ schema|json_encode|raw }}
+        }
+    </script>
+    <div class="wrapper">
+        <div class="faq__split">
+            <header class="block__header">
+                <h2 class="block__heading">{{ block.heading }}</h2>
+                <div class="block__intro">{{ block.intro }}</div>
+            </header>
+            <div class="faq__content">
+                {% for faq in faqs %}
+                    <article class="accordeon faqItem js-accordeon" data-accordeon-group="faq">
+                        <h4 class="faqItem__heading">
+                            <button aria-controls="faq-a-{{ loop.index }}" aria-expanded="false" class="accordeon__button faqItem__question" id="faq-q-{{ loop.index }}">{{ faq.title }}</button>
+                        </h4>
+                        <div aria-labelledby="faq-q-{{ loop.index }}" class="accordeon__content faqItem__answer" id="faq-a-{{ loop.index }}" hidden>
+                            <div class="accordeon__contentInner richText">
+                                {{ faq.faqAnswer }}
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

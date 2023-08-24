@@ -1,0 +1,16 @@
+.people {
+    &__people {
+        display: grid;
+        gap: 2rem 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include screen-min(l) {
+            gap: 3rem 1rem;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include screen-min(xl) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+}

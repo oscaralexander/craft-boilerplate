@@ -1,0 +1,11 @@
+fill: null
+format: avif
+handle: media_16x9_m
+height: 720
+interlace: none
+mode: crop
+name: 'Media 16:9 M'
+position: center-center
+quality: null
+upscale: false
+width: 1280

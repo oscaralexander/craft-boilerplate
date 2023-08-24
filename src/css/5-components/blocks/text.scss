@@ -1,13 +1,7 @@
 .text {
     &__body {
-        font-size: var(--font-size-l);
-    }
-
-    &__ctas {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: center;
-        margin-top: 3rem;
+        @include screen-min(l) {
+            font-size: var(--font-size-l);
+        }
     }
 }

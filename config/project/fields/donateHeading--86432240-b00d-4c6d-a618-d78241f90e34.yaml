@@ -1,0 +1,19 @@
+columnSuffix: vqxsywpf
+contentColumnType: text
+fieldGroup: e06d5210-b8bd-48ea-9cba-31445a25d231 # Donate
+handle: donateHeading
+instructions: null
+name: Heading
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

@@ -1,6 +1,31 @@
 .cards {
     &__grid {
-        display: flex;
-        gap: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(var(--cards-cols), 1fr);
+        gap: 1rem;
+
+        @include screen-max(l) {
+            &--scrolling {
+                gap: var(--gutter);
+                grid-auto-columns: 75vw;
+                grid-auto-flow: column;
+                grid-template-columns: none;
+                margin: 0 calc(var(--gutter) * -1);
+                overflow: auto;
+                -ms-overflow-style: none;
+                padding: 0 var(--gutter);
+                scroll-padding: var(--gutter);
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .card {
+                    scroll-snap-align: start;
+                }
+            }
+        }
     }
 }

@@ -32,7 +32,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 7b8d2443-3b5c-4a38-a34d-2f79a4078855 # Antwoord
+            fieldUid: 7b8d2443-3b5c-4a38-a34d-2f79a4078855 # Answer
             instructions: null
             label: null
             required: true
@@ -48,7 +48,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Standaard
-section: 39bd6e5b-ffc3-4f8a-a7f0-09c2872ca6ca # Veelgestelde vragen
+section: 39bd6e5b-ffc3-4f8a-a7f0-09c2872ca6ca # FAQ
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

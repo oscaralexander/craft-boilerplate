@@ -1,0 +1,12 @@
+{% if ctas %}
+    <div class="ctas {{ (center ?? false) ? "ctas--center" : "" }}">
+        {% for cta in ctas %}
+            <a
+                class="{{ cta.isPrimary ? "btn btn--primary" : (class_name ?? "btn") }}"
+                data-ga-event="{{ ga_event }}"
+                data-ga-param-text="{{ cta.text }}"
+                href="{{ cta.url }}"
+            >{{ cta.text }}</a>
+        {% endfor %}
+    </div>
+{% endif %}

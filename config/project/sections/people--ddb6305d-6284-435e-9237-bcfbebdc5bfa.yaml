@@ -1,0 +1,32 @@
+defaultPlacement: end
+enableVersioning: false
+handle: people
+name: People
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  c64df7e3-a993-46f7-9510-fa4ac9bcff1e: # ไทย
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # English
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 2a405940-a5df-44c7-ab15-df8520d120fc
+type: structure

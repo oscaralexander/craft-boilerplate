@@ -1,0 +1,26 @@
+{% if card.ctaUrl %}
+    <a
+        class="card__imageBox card__imageBox--{{ card.imagePosition }} {{ card.isImageIcon ? "card__imageBox--icon" : "" }}"
+        data-ga-event="card_image_click"
+        data-ga-param-card-title="{{ card.heading }}"
+        href="{{ card.ctaUrl }}"
+    >
+{% else %}
+    <div class="card__imageBox {{ card.isImageIcon ? "card__imageBox--icon" : "" }}">
+{% endif %}
+<img
+    alt="{{ card.heading }}"
+    loading="lazy"
+    sizes="100vw"
+    src="{{ image.url }}"
+    {% if not card.isImageIcon %}
+        srcset="
+            {{ image.getUrl("cardL") }} 960w
+        "
+    {% endif %}
+>
+{% if card.ctaUrl %}
+    </a>
+{% else %}
+    </div>
+{% endif %}

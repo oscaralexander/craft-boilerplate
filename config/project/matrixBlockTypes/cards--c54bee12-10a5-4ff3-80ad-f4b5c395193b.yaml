@@ -7,30 +7,6 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 26950af4-cc33-459f-996c-087f1d41ae4d # Text alignment
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 591cc09b-dc63-4baf-9f2e-895114a27165
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: df6be5c5-efca-48eb-9988-cfdb1be6bddc # Card text alignment
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9c36a079-0552-4e64-bfac-57ef3d7ca7fc
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 69fe189c-0e5e-4247-915e-dbe44bf4eb85 # Theme
             instructions: null
             label: null
@@ -74,6 +50,30 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f12e1160-4ff3-4b86-a947-8ff84bb5777b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d497203f-3fda-4d05-be38-6d5abda08ff0 # Cards per row
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ec2ded5-9f7c-471f-a4b5-00f1a121e11b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e9a853cc-a4b4-4aa2-9256-8af64183878d # Horizontal scroll on mobile?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4291acf3-d114-478e-9383-25de5f65948f
             userCondition: null
             warning: null
             width: 100
@@ -153,13 +153,13 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Categories
-  26950af4-cc33-459f-996c-087f1d41ae4d: # Text alignment
-    columnSuffix: mkndysbx
+  d497203f-3fda-4d05-be38-6d5abda08ff0: # Cards per row
+    columnSuffix: xiafdlpk
     contentColumnType: string
     fieldGroup: null
-    handle: textAlignment
-    instructions: null
-    name: 'Text alignment'
+    handle: cardsPerRow
+    instructions: 'Number of cards per row on desktop.'
+    name: 'Cards per row'
     searchable: false
     settings:
       options:
@@ -167,10 +167,21 @@ fields:
           __assoc__:
             -
               - label
-              - Left
+              - '2'
             -
               - value
-              - left
+              - '2'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '3'
+            -
+              - value
+              - '3'
             -
               - default
               - '1'
@@ -178,10 +189,10 @@ fields:
           __assoc__:
             -
               - label
-              - Center
+              - '4'
             -
               - value
-              - center
+              - '4'
             -
               - default
               - ''
@@ -198,11 +209,25 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 941888698
+      changedFieldIndicator: 1552247256
       columns:
         __assoc__:
           -
+            - 4d8bbcc7-d9f8-4612-a192-de525fbcf941 # Theme
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
             - 59d081d5-cd03-43df-bbd6-e234b893d957 # Image
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - ef529d54-8ff7-4751-a83d-dbcb01b23595 # Image position
             -
               __assoc__:
                 -
@@ -251,7 +276,7 @@ fields:
                   - width
                   - ''
           -
-            - 4d8bbcc7-d9f8-4612-a192-de525fbcf941 # Theme
+            - 3206bc0e-c660-4d6c-ade9-a6d4885041be # Text alignment
             -
               __assoc__:
                 -
@@ -268,41 +293,21 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
-  df6be5c5-efca-48eb-9988-cfdb1be6bddc: # Card text alignment
-    columnSuffix: bpetarjk
-    contentColumnType: string
+  e9a853cc-a4b4-4aa2-9256-8af64183878d: # Horizontal scroll on mobile?
+    columnSuffix: ojrmpnqf
+    contentColumnType: boolean
     fieldGroup: null
-    handle: cardTextAlignment
-    instructions: null
-    name: 'Card text alignment'
+    handle: isScrolling
+    instructions: 'Scroll cards horizontally on mobile instead of stacking them vertically.'
+    name: 'Horizontal scroll on mobile?'
     searchable: false
     settings:
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Left
-            -
-              - value
-              - left
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Center
-            -
-              - value
-              - center
-            -
-              - default
-              - ''
+      default: true
+      offLabel: 'No'
+      onLabel: 'Yes'
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\Dropdown
+    type: craft\fields\Lightswitch
 handle: cards
 name: Cards
-sortOrder: 2
+sortOrder: 4

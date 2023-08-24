@@ -1,0 +1,27 @@
+<div class="donate js-modal" id="modal-donate">
+    <div class="donate__dialog" role="dialog">
+        <button class="donate__hide js-modalHide"></button>
+        <div class="donate__visual">
+            {% set visual = donate.donateVisual.one() %}
+            {% if visual %}
+                {% switch visual.kind %}
+                    {% case "image" %}
+                        <img alt="" src="{{ visual.getUrl() }}">
+
+                    {% case "video" %}
+                        <video autoplay loop muted playsinline>
+                            <source src="{{ visual.url }}">
+                        </video>
+                {% endswitch %}
+            {% endif %}
+            <div class="donate__copy">
+                <h3>{{ donate.donateHeading }}</h3>
+                {{ donate.donateText }}
+            </div>
+        </div>
+        <div class="donate__embed">
+            <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+            <iframe src="https://donorbox.org/embed/thai-child-development-foundation" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important"></iframe>
+        </div>
+    </div>
+</div>

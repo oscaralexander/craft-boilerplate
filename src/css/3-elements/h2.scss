@@ -1,5 +1,7 @@
 h2 {
+    color: rgb(var(--text-color-hc));
     font-family: var(--h2-font);
+    font-size: var(--font-size-3xl);
     font-weight: var(--h2-font-weight);
     letter-spacing: var(--h2-letter-spacing);
     line-height: var(--h2-line-height);

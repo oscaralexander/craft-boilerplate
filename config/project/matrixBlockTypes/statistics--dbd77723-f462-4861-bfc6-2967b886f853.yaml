@@ -186,7 +186,7 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText
   bb547ad8-d19b-4dc8-b723-39dfb5bd836c: # Text
     columnSuffix: kyawzinl
@@ -206,8 +206,8 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText
 handle: statistics
 name: Statistics
-sortOrder: 1
+sortOrder: 3

@@ -1,0 +1,9 @@
+baseUrl: null
+enabled: true
+handle: en
+hasUrls: false
+language: en
+name: English
+primary: true
+siteGroup: c83fc930-f070-4cca-a8e3-24dec242c1a1 # Boilerplate
+sortOrder: 1

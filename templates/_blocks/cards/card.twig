@@ -1,0 +1,35 @@
+{% set image = card.image.one() %}
+{% set theme = card.theme.one() ? card.theme.one().slug : "theme0" %}
+<article class="appear card card--{{ card.textAlignment }} u-{{ theme }} js-appear" style="animation-delay: {{ loop.index0 * 250 }}ms;">
+    {% if image and card.imagePosition == "top" %}
+        {% include "_blocks/cards/card/image" with { card: card, image: image } %}
+    {% endif %}
+    <div class="card__flex">
+        <h3 class="card__heading">{{ card.heading }}</h3>
+        <div class="card__body">{{ card.body }}</div>
+    </div>
+    {% if card.ctaText and card.ctaUrl %}
+        <footer class="card__footer">
+            {% switch card.ctaType %}
+                {% case "button" %}
+                    {% set ctaClassName = "btn" %}
+                
+                {% case "button_inverted" %}
+                    {% set ctaClassName = "btn btn--inverted" %}
+
+                {% default %}
+                    {% set ctaClassName = "arrowLink" %}
+            {% endswitch %}
+            <a
+                class="{{ ctaClassName }}"
+                data-ga-event="card_cta_click"
+                data-ga-param-card-cta-text="{{ card.ctaText }}"
+                data-ga-param-card-title="{{ card.heading }}"
+                href="{{ card.ctaUrl }}"
+            >{{ card.ctaText }}</a>
+        </footer>
+    {% endif %}
+    {% if image and card.imagePosition == "bottom" %}
+        {% include "_blocks/cards/card/image" with { card: card, image: image } %}
+    {% endif %}
+</article>

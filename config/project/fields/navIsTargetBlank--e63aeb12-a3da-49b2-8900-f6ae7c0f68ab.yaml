@@ -1,9 +1,9 @@
 columnSuffix: ktxsbzru
 contentColumnType: boolean
-fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigatie
+fieldGroup: 669027a6-63bc-41f5-8033-e011d6a0bace # Navigation
 handle: navIsTargetBlank
 instructions: null
-name: 'Openen in nieuwe tab?'
+name: 'Open in new tab?'
 searchable: false
 settings:
   default: false

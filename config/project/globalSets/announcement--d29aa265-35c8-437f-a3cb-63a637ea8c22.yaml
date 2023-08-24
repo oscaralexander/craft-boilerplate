@@ -1,0 +1,48 @@
+fieldLayouts:
+  587179d9-a3e7-45a6-bc17-625f9e150539:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 84883a90-345e-4cb8-846e-857285883890 # Show announcement?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fe700d0d-21c8-46eb-b9c9-6b5e309121d0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e12c7cce-dea8-41a3-8ab3-a577e0b9b432 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81e27718-290f-45bf-bbea-fb9e55abb131
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5970bf4f-c171-4a64-b556-3a8c27a5cb80 # URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a805cabf-f654-4f27-9ab2-7b6f4f9309a3
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Announcement bar'
+        uid: fc27ddb4-2de3-4161-a2c7-c37762d93fe4
+        userCondition: null
+handle: announcement
+name: Announcement
+sortOrder: 7

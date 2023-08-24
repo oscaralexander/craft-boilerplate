@@ -1,0 +1,27 @@
+columnSuffix: mwuxhbei
+contentColumnType: text
+fieldGroup: 5030c100-01df-4677-897d-cb82c849dfff # People
+handle: personBio
+instructions: null
+name: Bio
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Simple.json
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\redactor\Field

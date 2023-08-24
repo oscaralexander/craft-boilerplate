@@ -1,0 +1,122 @@
+.donate {
+    animation: modal 250ms both ease-out;
+    background: rgb(0 0 0 / 50%);
+    display: none;
+    inset: 0;
+    overflow: auto;
+    padding: 28px 8px;
+    position: fixed;
+    z-index: 9999;
+
+    @include screen-min(l) {
+        padding: 16px;
+    }
+
+    &__dialog {
+        animation: modalDialog 250ms both ease-out;
+        background: #fff;
+        border-radius: var(--card-border-radius);
+        box-shadow: 0 16px 48px rgb(0 0 0 / 50%);
+        display: flex;
+        margin: auto;
+        max-height: calc(100vh - 48px);
+        max-width: 960px;
+        position: relative;
+        width: 100%;
+    }
+
+    &__hide {
+        appearance: none;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 25%);
+        height: 40px;
+        padding: 12px;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 40px;
+
+        &::after {
+            --mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><line x1="2.42763" y1="1.85378" x2="14.42763" y2="13.85378" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1.25"/><line x1="14.42763" y1="1.85378" x2="2.42763" y2="13.85378" fill="none" stroke="%23000" stroke-miterlimit="10" stroke-width="1.25"/></svg>');
+            background-color: currentColor;
+            content: '';
+            display: block;
+            height: 16px;
+            -webkit-mask-image: var(--mask-image);
+            mask-image: var(--mask-image);
+            opacity: 0.5;
+            transition: opacity var(--duration-m);
+            width: 16px;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__visual,
+    &__embed {
+        flex: 1;
+    }
+
+    &__visual {
+        background: #000;
+        border-radius: var(--card-border-radius) 0 0 var(--card-border-radius);
+        align-items: flex-end;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+
+        img,
+        video {
+            height: 100%;
+            inset: 0;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+    &__copy {
+        background-image: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 75%) 75%);
+        color: #fff;
+        padding: 6rem 3rem 4rem 3rem;
+        position: relative;
+        z-index: 2;
+
+        h3 {
+            color: #fff;
+            font-size: var(--font-size-xxl);
+        }
+
+        p {
+            color: rgb(255 255 255 / 66%);
+            font-size: var(--font-size-l);
+            line-height: var(--line-height-l);
+        }
+    }
+
+    &__embed {
+        flex: 1;
+        max-width: 440px;
+        overflow: scroll;
+        padding: 8px;
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &.is-visible {
+        background: rgb(0 0 0 / 50%);
+        display: flex;
+    }
+}
+
+.has-modal {
+    overflow: hidden;
+}

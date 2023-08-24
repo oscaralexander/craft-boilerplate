@@ -1,0 +1,24 @@
+fieldLayouts:
+  f24bf520-c5f1-477c-828c-3ab2c808f597:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 393a6097-406c-4a2f-a1dc-cd2d3637d599 # Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a4cfce27-fb9d-4fa8-9d12-279368769d42
+            userCondition: null
+            warning: null
+            width: 100
+        name: Brand
+        uid: 9eaac0e1-5f61-4bbf-9112-75374fd43d60
+        userCondition: null
+handle: brand
+name: Brand
+sortOrder: 5

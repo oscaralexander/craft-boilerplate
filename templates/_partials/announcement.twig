@@ -1,0 +1,12 @@
+{% if announcement.announcementIsVisible %}
+    <div class="announcement js-announcement">
+        <div class="announcement__inner">
+            <a
+                data-ga-event="announcement_click"
+                data-ga-param-announcement-text="{{ announcement.announcementText }}"
+                href="{{ announcement.announcementUrl }}"
+            >{{ announcement.announcementText }}</a>
+        </div>
+        <button class="announcement__close js-announcementClose"></button>
+    </div>
+{% endif %}

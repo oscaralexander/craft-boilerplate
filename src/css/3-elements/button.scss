@@ -1,0 +1,15 @@
+button {
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--font-1);
+    font-size: var(--font-size-m);
+    margin: 0;
+
+    &:focus {
+        outline: var(--focus-outline);
+    }
+}

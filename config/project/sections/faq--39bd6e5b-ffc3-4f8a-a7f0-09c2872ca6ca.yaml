@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: false
 handle: faq
-name: 'Veelgestelde vragen'
+name: FAQ
 previewTargets:
   -
     __assoc__:
@@ -16,7 +16,7 @@ previewTargets:
         - '1'
 propagationMethod: siteGroup
 siteSettings:
-  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # Nederlands
+  cc7cc153-c4ab-4663-a4fb-968ed21e196b: # English
     enabledByDefault: true
     hasUrls: false
     template: null

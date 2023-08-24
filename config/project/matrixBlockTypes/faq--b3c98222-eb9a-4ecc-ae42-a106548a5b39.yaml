@@ -1,0 +1,170 @@
+field: 3fff2238-67a0-4baf-afcf-9136097514c6 # Body
+fieldLayouts:
+  aa2d0ff0-fed2-4087-8364-ee4f6324bce2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 23134cbf-e442-4fc7-8ecd-ef6f9a33ed08 # Theme
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4cd0cc51-88f1-465b-894a-5e82b30c6913
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 92b863f0-088b-453b-91da-35ac8ed4059d # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd73dd33-43f4-4bd9-a340-d8584b8c6308
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5b4357bd-0cef-4a6d-bcd2-847597082ae5 # Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a6dc8cb-bf92-4b1a-bc04-8ce27fcdba3b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9249c56b-7e83-41c2-bda7-05f7c6460305 # FAQs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5572e80-a158-4592-938c-089c5160ceee
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: aeaa9044-ce99-4933-811e-ce4bf623b60b
+        userCondition: null
+fields:
+  5b4357bd-0cef-4a6d-bcd2-847597082ae5: # Intro
+    columnSuffix: dhawjwlo
+    contentColumnType: text
+    fieldGroup: null
+    handle: intro
+    instructions: null
+    name: Intro
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  92b863f0-088b-453b-91da-35ac8ed4059d: # Heading
+    columnSuffix: mhglxlju
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  9249c56b-7e83-41c2-bda7-05f7c6460305: # FAQs
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: faqs
+    instructions: 'Leave empty to display all entries.'
+    name: FAQs
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Select question(s)'
+      showSiteMenu: false
+      sources:
+        - 'section:39bd6e5b-ffc3-4f8a-a7f0-09c2872ca6ca' # FAQ
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  23134cbf-e442-4fc7-8ecd-ef6f9a33ed08: # Theme
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: theme
+    instructions: null
+    name: Theme
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 0
+      selectionLabel: 'Select theme'
+      showSiteMenu: false
+      source: 'group:84abf42b-4f2b-48ba-8f3d-12a0b7cc81d5' # Themes
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+handle: faq
+name: FAQ
+sortOrder: 8

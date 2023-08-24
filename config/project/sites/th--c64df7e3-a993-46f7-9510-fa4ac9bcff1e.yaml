@@ -1,0 +1,9 @@
+baseUrl: 'https://boilerplate.ddev.site/th'
+enabled: '1'
+handle: th
+hasUrls: true
+language: th
+name: ไทย
+primary: false
+siteGroup: c83fc930-f070-4cca-a8e3-24dec242c1a1 # Boilerplate
+sortOrder: 2

@@ -1,0 +1,19 @@
+columnSuffix: gbeqmayv
+contentColumnType: text
+fieldGroup: 5030c100-01df-4677-897d-cb82c849dfff # People
+handle: personRole
+instructions: null
+name: Role
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: 'Founder & CEO'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

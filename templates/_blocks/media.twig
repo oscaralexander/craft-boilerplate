@@ -1,0 +1,51 @@
+{% set media = block.media.all() %}
+{% set numMedia = media|length %}
+{% switch numMedia %}
+    {% case 1 %}
+        {% set sizes = ["100w"] %}
+        {% set transforms = ["16x9"] %}
+
+    {% case 2 %}
+        {% set sizes = ["50w", "50w"] %}
+        {% set transforms = ["1x1", "4x3"] %}
+
+    {% case 3 %}
+        {% set sizes = ["50w", "25w", "25w"] %}
+        {% set transforms = ["16x9", "9x16", "1x1"] %}
+
+    {% case 4 %}
+        {% set sizes = ["75w", "25w", "50w", "50w"] %}
+        {% set transforms = ["16x9", "1x1", "16x9", "1x1"] %}
+
+    {% case 5 %}
+        {% set transforms = ["16x9", "1x1", "1x1", "9x16", "16x9"] %}
+
+    {% case 6 %}
+        {% set transforms = ["1x1", "1x1", "9x16", "1x1", "9x16", "16x9"] %}
+{% endswitch %}
+<section class="block media u-theme0">
+    <div class="wrapper">
+        <div class="media__grid media__grid--{{ block.media|length }}">
+            {% for mediaItem in block.media.all() %}
+                <div class="media__col">
+                    {% switch mediaItem.kind %}
+                        {% case "image" %}
+                            <img
+                                alt=""
+                                class="media__img js-lightbox"
+                                data-lightbox-group="media"
+                                data-lightbox-height="{{ mediaItem.height }}"
+                                data-lightbox-src="{{ mediaItem.url }}"
+                                data-lightbox-width="{{ mediaItem.width }}"
+                                src="{{ mediaItem.getUrl() }}"
+                            >
+                        {% case "video" %}
+                            <video autoplay loop muted playsinline>
+                                <source src="{{ mediaItem.url }}">
+                            </video>
+                    {% endswitch %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

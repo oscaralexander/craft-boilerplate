@@ -1,9 +1,9 @@
 columnSuffix: nqmjuxet
 contentColumnType: text
-fieldGroup: 5670711d-a93a-4e98-9710-ef6506090fe4 # Navigatiebalk
+fieldGroup: 5670711d-a93a-4e98-9710-ef6506090fe4 # Navigation bar
 handle: navBarCtaUrl
 instructions: null
-name: 'Knop URL'
+name: 'CTA button URL'
 searchable: false
 settings:
   byteLimit: null
